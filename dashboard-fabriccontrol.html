@@ -1,0 +1,2747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>Raw Material Fabric Control | Aramark</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-big-grid/css/bootstrap-big-grid.min.css" rel="stylesheet">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- Kendo CSS-->
+    <!--<link href="kendo/kendo-css/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="kendo/kendo-css/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.common.min.css" />-->
+    <!--<link rel="stylesheet" href="kendo-css/kendo.default.min.css" />-->
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.default-v2.min.css" />
+    <!--<link rel="stylesheet" href="kendo-css/kendo.mobile.all.min.css" />-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body class="aramrk-landFrame">
+    <div class="loader"></div>
+    <nav class="navbar navbar-expand-lg fixed-top armrk-landNavbar">
+      <a class="navbar-brand" href="#">
+        <img src="img/aramark_logo.png"  class="d-inline-block align-top logo" alt=""> <span class="tagline">AGS ERP</span>
+      </a>
+          
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse top-header-menu" id="navbarTogglerDemo01">
+        
+
+        <ul class="navbar-nav mr-0 nav nav-tabs  aramrk-header-navbar">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Secure 360</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Master</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="dashboard-fabricreceiving.html">Raw Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manufacturing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Staging</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order Fulfilment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Purchase Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cut Specials</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto aramrk-header-navbar">
+          <li class="nav-item active">
+            <a class="nav-link link" aria-hidden="true" data-toggle="modal" data-target="#configAdminmodal"><span class="oi oi-cog" title="Configure Tabs" ></span></a>
+          </li>
+        </ul>
+
+
+        <ul class="navbar-nav  justify-content-end language-switch">
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle c-language" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              English
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Spanish</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown aramrk-header-user"> 
+            <a class="nav-link dropdown-toggle c-language" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="img/icn_userdefault.png" width="30" height="30" class="img-fluid rounded-circle profPic" alt="Generic placeholder thumbnail">John Smith
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <!--<a class="dropdown-item" href="#">User profile</a>-->
+              <a class="dropdown-item" href="signin.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid armrk-landFluid">
+      <!--<div class="row">-->
+        <div class="row">
+          <div class="menu-row col-sm-3 col-md-2 d-none d-sm-block bg-light card-box-shadow sidebar ">
+                  <!-- Menu -->
+              <div class="side-menu">
+              
+                <nav class="side-menu-container" role="navigation">
+                  <!--<nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">-->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                
+                <!-- Main Menu -->
+                <!--<div class="">-->
+                    <ul class="nav navbar-nav">
+
+                      <span class="sidebar-toggle">
+                                <span class="oi oi-menu expandMenu"></span>
+                                <span class="fa fa-arrow-left pull-right collapseMenu"></span>
+                            </span>
+                            <span class="sidebar-items-collapsable">
+                                <span class="expandAllitems"><i class="fa fa fa-caret-down"></i> Expand All</span>
+                                <span class="pull-right collapseAllitems"><i class="fa fa fa fa-caret-right"></i> Collapse All</span>
+                            </span>
+                        <!-- Dropdown-->
+                        <li class="panel panel-default" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-Activities">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Item Master</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-Activities" class="panel-collapse collapse dropdown-lvl">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a href="#">
+                                                <!--  Level--> 
+                                                Level 1
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a data-toggle="collapse" href="#dropdown-upldbus">
+                                                Level 1
+                                                
+                                            </a>
+                                            <div id="dropdown-upldbus" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Planning</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Purchasing</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">T</i><span>Tracking</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default active" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-thirdpartymgmt" aria-expanded="true">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Fabric &amp; Inventory Control</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-thirdpartymgmt" class="panel-collapse dropdown-lvl collapse show">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-inventorycontrol.html">
+                                                Inventory Control 
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default"   id="dropdown" >
+                                            <a href="dashboard-fabricreceiving.html">
+                                                Fabric Receiving
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default active"  id="dropdown">
+                                            <a href="dashboard-fabriccontrol.html">
+                                                Fabric Control 
+                                            </a>
+                                        </li>
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-fabricplanning.html">
+                                                Fabric Planning
+                                            </a>
+                                        </li>
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard.html">
+                                                Reports
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        
+
+                    </ul>
+                <!-- /.navbar-collapse -->
+                </nav>
+              
+              </div>
+          </div>
+        <main class="col-sm pt-3 pb-4 extendedMain" role="main">
+         <div class="row">
+           <div class="col-sm-6">
+             <nav class="breadcrumb">
+               <a class="breadcrumb-item"><i class="fa fa-angle-left" aria-hidden="true"></i></a> 
+              <a class="breadcrumb-item" href="dashboard.html"> Home</a> 
+              <a class="breadcrumb-item">|</a> 
+              <a class="breadcrumb-item" href="#">Raw Material </a>
+              <a class="breadcrumb-item"><i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+              <a class="breadcrumb-item" href="#">Fabric &amp; Inventory Control </a>
+              <a class="breadcrumb-item"><i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+              <span class="breadcrumb-item active">Fabric Control</span>
+            </nav>
+          </div>
+            <div class="col-sm-6">
+              <div id="agglomerations" class="agglomerations text-right">
+                
+                <span title="Help" id="moscow"><img src="img/icn_help.png" class="icon-top"></span>
+
+                <span title="Add" id="moscow"><img src="img/icn_addrec.png" class="icon-top"></span>
+
+                <span title="Refresh" id="moscow"><img src="img/icn_refresh.png" class="icon-top"></span>
+
+                <span title="Rewind" id="moscow"><img src="img/icn_rewind.png" class="icon-top"></span>
+
+                <span title="DoCopy" id="moscow"><img src="img/icn_docopy.png" class="icon-top"></span>
+
+                <span title="CopyRepo" id="moscow"><img src="img/icn_copyrepo.png" class="icon-top"></span>
+
+                <span title="Window" id="moscow"><img src="img/icn_window.png" class="icon-top"></span>
+
+                <span title="Print" id="moscow"><img src="img/icn_print.png" class="icon-top"></span>
+             </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+          <div class="row">
+           
+            <div class="col-sm-12">
+            
+                   <div class="aramark-tabs k-content card-box-shadow">
+                        <div id="tabstrip">
+                            <ul>
+                                <li class="k-state-active">
+                                    Allocate
+                                </li>
+                                <li>
+                                    DeAllocate
+                                </li>
+                                <li>
+                                    Pull
+                                </li>
+                                <li>
+                                    Consume
+                                </li>
+                                <li>
+                                    Return
+                                </li>
+                            </ul>
+                            <!--tab Allocate-->
+                            <div class="tab-container">
+                                <div class="row custForm">
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Order</label>
+                                        <div class="col-sm-7 custFields">
+																					<select id="icon-right" class="form-control k-textbox"  >
+                                            <option>A001722</option>
+                                            <option>A001723</option>
+                                            <option>A001724</option>
+                                            <option>A001725</option>
+                                            <option>A001726</option>
+                                            <option>A001727</option>
+                                        </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Show Allocated</label>
+                                        <div class="col-sm-7 custFields">
+                                        <div class="form-check form-check-inline">
+																						<label class="form-check-label">
+																							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">  
+																						</label>
+																					</div>
+                                        </div>
+                                    </div>
+
+																		 <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Sew Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="MX"/>
+                                        </div>
+                                    </div>
+																		</div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="71"/>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Style</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="AXG01037" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Color</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="NAVY"/>
+                                        </div>
+                                    </div>
+																		 </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">MPS Cut Qty</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="108"/>
+                                        </div>
+                                    </div>
+                                 
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Fiscal Week Nbr</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="31" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Date</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="05/05/2017" />
+                                        </div>
+                                    </div>
+																		</div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Fab BOMYield</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="213.84" />
+                                        </div>
+                                    </div>
+                                  <div class="form-group row custFormrow">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Marker Yield</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="0" />
+                                        </div>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix"></div>
+                          
+                               
+                                
+                                <div id="grid"></div>
+                                <div class="clearfix"></div>
+                                
+
+																<form class="armrk-tbl-footer custFields form-inline">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Available Rolls:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+                            
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Selected Yards:</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>
+                                  <div class="form-group pr-4">
+                                    <button type="submit" class="btn btn-danger armrk-btn">Allocate</button>
+                                  </div>
+                                  
+                                </form>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!--end of tab Allocate-->
+
+                            <!--tab On DeAllocate-->
+                             <div class="tab-container">
+                                <div class="row custForm">
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Order</label>
+                                        <div class="col-sm-7 custFields">
+																					<select id="icon-right" class="form-control k-textbox"  >
+                                            <option>A001722</option>
+                                            <option>A001723</option>
+                                            <option>A001724</option>
+                                            <option>A001725</option>
+                                            <option>A001726</option>
+                                            <option>A001727</option>
+                                        </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Sew Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="71"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="71"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Style</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="AMGS1557" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Color</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="WHITE"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Comment</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="SPSZ"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Fiscal Week Nbr</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="52" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Date</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="10/07/2017" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">BOM Yield</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="211.68" />
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+																		<div class="form-group row custFormrow">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Marker Yield</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="246" />
+                                        </div>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix"></div>
+                          
+  
+                                <div id="grid2"></div>
+                                <div class="clearfix"></div>
+                                
+
+																<form class="armrk-tbl-footer custFields form-inline">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Rolls Allocated:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+                  
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Selected Yards:</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>
+                                  <div class="form-group pr-4">
+                                    <button type="submit" class="btn btn-danger armrk-btn">DeAllocate</button>
+                                  </div>
+                                  
+                                </form>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <!--end of tab DeAllocate-->
+                            
+                            <!--tab Pull-->
+                             <div class="tab-container">
+                                <div class="row custForm">
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Order</label>
+                                        <div class="col-sm-7 custFields">
+                                        <select id="icon-right" class="form-control k-textbox"  >
+                                            <option>A001722</option>
+                                            <option>A001723</option>
+                                            <option>A001724</option>
+                                            <option>A001725</option>
+                                            <option>A001726</option>
+                                            <option>A001727</option>
+                                        </select>
+                                         
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Sew Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="71"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="71"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Style</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="AMGS1557" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Color</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="WHITE"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Comment</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="SPSZ"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Fiscal Week Nbr</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="52" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Date</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="10/06/2017" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">BOM Yield</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="211.86" />
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+																		<div class="form-group row custFormrow">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Marker Yield</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="246" />
+                                        </div>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix"></div>
+                          
+                                
+                                <div id="grid3"></div>
+                                <div class="clearfix"></div>
+                                
+
+																<form class="armrk-tbl-footer custFields form-inline">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Rolls Allocated:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+                        
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Selected Yards:</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>
+                                  <div class="form-group pr-4">
+                                    <button type="submit" class="btn btn-danger armrk-btn">Pull</button>
+                                  </div>
+                                  
+                                </form>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!--end of tab Pull-->
+
+                            <!--tab Consume-->
+                             <div class="tab-container">
+                                <div class="row custForm">
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Order</label>
+                                        <div class="col-sm-7 custFields">
+																					<select id="icon-right" class="form-control k-textbox"  >
+																							<option>A001722</option>
+																							<option>A001723</option>
+																							<option>A001724</option>
+																							<option>A001725</option>
+																							<option>A001726</option>
+																							<option>A001727</option>
+																					</select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Sew Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="71"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Plant</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="71"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Style</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="AMGS0019" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Color</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="CHAR"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">MPS Cut Qty</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="1044"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Fiscal Week Nbr</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="15" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Cut Date</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="10/06/2017" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Fab BOMYield</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="1273.68" />
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <label for="staticEmail" class="col-sm-4 col-form-label">Actual Cut Qty</label>
+                                        <div class="col-sm-4 custFields mr-0 float-right">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="0" />
+                                        </div>
+																				<div class="col-sm-4 custFields mr-0 float-right">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="0" />
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix"></div>
+                          
+                                <div id="grid4"></div>
+                                <div class="clearfix"></div>
+
+																<form class="armrk-tbl-footer custFields form-inline">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Total Rolls:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+                    
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Total Yards:</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>
+                                  <div class="form-group pr-4">
+                                    <button type="submit" class="btn btn-danger armrk-btn">Consume</button>
+                                  </div>
+                                  
+                                </form>
+
+															
+                                <div class="clearfix"></div>
+                            </div>
+                            <!--end of tab Consume-->
+
+                            <!--tab Return-->
+                             <div class="tab-container">
+                               
+                                <div id="grid5"></div>
+                                <div class="clearfix"></div>
+                      
+
+																<form class="armrk-tbl-footer custFields form-inline">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Rolls Alloacted:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+              
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Selected Yards:</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>
+                                  <div class="form-group pr-4">
+                                    <button type="submit" class="btn btn-danger armrk-btn">Post</button>
+                                  </div>
+                                  
+                                </form>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!--end of tab Return-->
+                        </div>
+                    <div class="clearfix"></div>
+                    
+               
+            </div>
+
+          </div>
+
+         
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--<script src="kendo/kendo-js/jquery.min.js"></script>-->
+    <!--<script src="js/bootstrap.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="kendo/kendo-js/kendo.all.min.js"></script>
+    <script src="js/multiselect.min.js"></script>
+    <script src="js/aramark-cust.js"></script>
+     <script>
+                $(document).ready(function() {
+                    $("#tabstrip").kendoTabStrip({
+                        animation:  {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+                
+
+								 // hack for iPhone 7.0.3 multiselects bug
+                      if(navigator.userAgent.match(/iPhone/i)) {
+                          $('select[multiple]').each(function(){
+                              var select = $(this).on({
+                                  "focusout": function(){
+                                      var values = select.val() || [];
+                                      setTimeout(function(){
+                                          select.val(values.length ? values : ['']).change();
+                                      }, 1000);
+                                  }
+                              });
+                              var firstOption = '<option value="" disabled="disabled"';
+                              firstOption += (select.val() || []).length > 0 ? '' : ' selected="selected"';
+                              firstOption += '>Select ' + (select.attr('title') || 'Options') + '';
+                              firstOption += '</option>';
+                              select.prepend(firstOption);
+                          });
+                      }
+
+                      $('#multiselectmain').multiselect();
+                      $('#multiselectsub').multiselect();
+								});
+            </script>
+
+           <!--modal config-->
+ <div class="modal fade modal-fullscreen armark-modal-admin-config" id="configAdminmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+       
+      <div class="modal-content">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close"><img src="img/icons/icon_close.png"></button>
+        <div class="modal-header">
+          <h4 class="modal-title ml-auto mr-auto" id="myModalLabel">Configure Tabs</h4>
+          
+        </div>
+        <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <h4 class="pb-3">General Tabs</h4>
+                <div class="row">
+                    <div class="col-6">
+                       <h5>&nbsp;</h5>
+                        <select name="from[]" id="multiselectmain" class="form-control" size="8" multiple="multiple" style="display: none;">
+                        </select>
+
+                         <select name="to[]" id="multiselectmain_to" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Secure 360</option>
+                            <option value="2">Master</option>
+                            <option value="3">Raw Material</option>
+                            <option value="4">Manufacturing</option>
+                            <option value="5">Staging</option>
+                            <option value="5">Order Fulfilment</option>
+                            <option value="5">Purchase Orders</option>
+                            <option value="5">Cut Specials</option>
+                        </select>
+
+                        <div>
+                           <div class="custFields  mt-2 float-left">
+                              <label for="simple-input" class="mt-1 mr-2" ><b>New</b></label>
+                            </div>
+                            <div class="col col-8 custFields float-left mt-2">
+                              <input id="simple-input" type="text" class="form-control k-textbox"  />
+                            </div>
+                              <span class="btn-green mt-2">+</span>    
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-6">
+                      <ul class="controller-list">
+                          <li><span id="multiselectmain_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                          <li><span class="" >Selected Tab <b>Raw Material</b></span></li>
+                          <li><span class="chip" >Make Default</span></li>
+                          <li><span id="multiselectmain_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                          <li><span class="btn-red" >X</span>           </li>
+                      </ul>           
+                    </div>
+                </div>
+              </div>
+              <div class="col-7">
+                <h4 class="pb-3">Selected Sub -  Tabs</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                      <label><b>Available</b></label>
+                        <select name="from[]" id="multiselectsub" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Inventory Control</option>
+                            <option value="2">Fabric Receiving</option>
+                            <option value="3">Fabric Control</option>
+                            <option value="4">Receiving</option>
+                            <option value="5">Tab place holder</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_rightSelected" class="btn-arrow"><i class="oi oi-caret-right"></i></span></li>
+                        <li><span id="multiselectsub_leftSelected" class="btn-arrow"><i class="oi oi-caret-left"></i></span></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                       <label><b>Selected</b></label>
+                        <select name="to[]" id="multiselectsub_to" class="form-control multipleContainer" size="8" multiple="multiple"></select>
+                    </div>
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                        <li><span id="multiselectsub_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger armrk-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end of modal config-->
+           
+           
+<!-- Pre Qual -->
+
+<script>
+  // <!-- data grid 1 -->
+	var data = [
+	{
+		srlno: '1',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+	{
+		srlno: '2',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '3',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '4',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '5',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '6',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '7',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '8',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '9',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '10',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '11',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '12',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '13',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '14',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '15',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '16',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+  {
+		srlno: '17',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		inventoryindate: '16/Oct/2017',
+		allocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+		consignmentroll: 'checked',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid").kendoGrid({
+			dataSource: {
+				data: data,
+				schema: {
+					model: {
+						fields: {
+              srlno: { type: "string" },
+              rollcase: { type: "string" },
+              binlocation: { type: "string" },
+              aramarkitem: { type: "string" },
+              color: { type: "string" },
+              fibercontent: { type: "string" },
+              yards: { type: "string" },
+              width: { type: "string" },
+              shadelotnbr: { type: "string" },
+              vendor: { type: "string" },
+              inventoryindate: { type: "string" },
+              allocate: { type: "string" },
+              allocattiontype: { type: "string" },
+              allocatedyards: { type: "string" },
+              consignmentroll: { type: "string" },
+						}
+					}
+				},
+				// pageSize: 16
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+             selectable: true, 
+             field: "Select",
+              // title: "<input type='checkbox' id='mainCheckbox'/>",
+              title: "<input type='checkbox' id=''/>",
+              template: "<input type='checkbox' class='parent_div'/>",
+              width: "50px"
+          },
+				{
+					field: "rollcase",
+					title: "Roll Case",
+          width: "80px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}'/>",
+				},
+				{
+					field: "binlocation",
+					title: "Bin Location",
+          width: "100px",
+					template: "<input type='text' style='width: 100%;' value='${binlocation}'/>",
+				},
+				{
+					field: "aramarkitem",
+					title: "Aramark Item",
+          width: "120px",
+					template: "<input type='text' style='width: 100%;' value='${aramarkitem}'/>",
+				},
+				{
+					field: "color",
+					title: "Color",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${color}'/>",
+				},
+				{
+					field: "fibercontent",
+					title: "Fiber Content",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${fibercontent}'/>",
+				},
+				{
+					field: "yards",
+					title: "Yards",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${yards}'/>",
+				},
+				{
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}'/>",
+				},
+				{
+					field: "shadelotnbr",
+					title: "Shade LotNbr",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${shadelotnbr}'/>",
+				},
+        {
+					field: "vendor",
+					title: "Vendor",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${vendor}'/>",
+				},
+        {
+					field: "inventoryindate",
+					title: "Inventory In Date",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${inventoryindate}'/>",
+				},
+        // {
+				// 	field: "allocate",
+				// 	title: "Allocate",
+        //   width: "60px",
+        //   template: "<input type='checkbox' ${allocate}/>",
+				// },
+        {
+					field: "allocattiontype",
+					title: "Allocation Type",
+          width: "100px",
+          template: "<select class='form-control'><option>Complete</option><option selcted>Partialy</option><option class='mb-color-red'>Incomplete </option><option>Selective</option></select>",
+				},
+        {
+					field: "allocatedyards",
+					title: "Allocated Yards",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${allocatedyards}'/>",
+				},
+				{
+					field: "consignmentroll",
+					title: "Consignment Roll",
+          template: "<input type='checkbox' ${consignmentroll}/>",
+          width: "120px",
+          filterable: false,
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 1 -->
+
+
+
+<script>
+  // <!-- data grid 2 -->
+	var data2 = [
+	{
+		srlno: '1',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+	{
+		srlno: '2',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '3',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '4',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '5',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '6',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '7',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '8',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '9',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '10',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '11',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '12',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '13',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '14',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '15',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '16',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+  {
+		srlno: '17',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		color: 'NAVY',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+		deallocate: '',
+		allocattiontype: 'Complete',
+		allocatedyards: '117',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid2").kendoGrid({
+			dataSource: {
+				data: data2,
+				schema: {
+					model: {
+						fields: {
+              srlno: { type: "string" },
+              rollcase: { type: "string" },
+              binlocation: { type: "string" },
+              aramarkitem: { type: "string" },
+              color: { type: "string" },
+              fibercontent: { type: "string" },
+              yards: { type: "string" },
+              width: { type: "string" },
+              shadelotnbr: { type: "string" },
+              vendor: { type: "string" },
+              deallocate: { type: "string" },
+              allocattiontype: { type: "string" },
+              allocatedyards: { type: "string" },
+						}
+					}
+				},
+				// pageSize: 16
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+             selectable: true, 
+             field: "Select",
+              // title: "<input type='checkbox' id='mainCheckbox'/>",
+              title: "<input type='checkbox' id=''/>",
+              template: "<input type='checkbox' class='parent_div'/>",
+              width: "50px"
+          },
+				{
+					field: "rollcase",
+					title: "Roll Case",
+          width: "80px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}'/>",
+				},
+				{
+					field: "binlocation",
+					title: "Bin Location",
+          width: "100px",
+					template: "<input type='text' style='width: 100%;' value='${binlocation}'/>",
+				},
+				{
+					field: "aramarkitem",
+					title: "Aramark Item",
+          width: "120px",
+					template: "<input type='text' style='width: 100%;' value='${aramarkitem}'/>",
+				},
+				{
+					field: "color",
+					title: "Color",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${color}'/>",
+				},
+				{
+					field: "fibercontent",
+					title: "Fiber Content",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${fibercontent}'/>",
+				},
+				{
+					field: "yards",
+					title: "Yards",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${yards}'/>",
+				},
+				{
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}'/>",
+				},
+				{
+					field: "shadelotnbr",
+					title: "Shade LotNbr",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${shadelotnbr}'/>",
+				},
+        {
+					field: "vendor",
+					title: "Vendor",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${vendor}'/>",
+				},
+        // {
+				// 	field: "deallocate",
+				// 	title: "De Allocate",
+        //   width: "100px",
+        //   template: "<input type='checkbox' ${deallocate}/>",
+				// },
+        {
+					field: "allocattiontype",
+					title: "Allocation Type",
+          width: "100px",
+          template: "<select class='form-control'><option>Complete</option><option selcted>Partialy</option><option class='mb-color-red'>Incomplete </option><option>Selective</option></select>",
+				},
+        {
+					field: "allocatedyards",
+					title: "Yards Allocated",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${allocatedyards}'/>",
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 2 -->
+
+
+<script>
+  // <!-- data grid 3 -->
+	var data3 = [
+	{
+		srlno: '1',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+	{
+		srlno: '2',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '3',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '4',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '5',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '6',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '7',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '8',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '9',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '10',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '11',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '12',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '13',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '14',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '15',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '16',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+  {
+		srlno: '17',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		fibercontent: '100% POLYESTOR',
+		yards: '117',
+		width: '65',
+		shadelotnbr: 'MDF1271',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber: '117',
+		selecttopull: '',
+		pulledby: '',
+		pulltimestamp: '',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid3").kendoGrid({
+			dataSource: {
+				data: data3,
+				schema: {
+					model: {
+						fields: {
+              srlno: { type: "string" },
+              rollcase: { type: "string" },
+              binlocation: { type: "string" },
+              aramarkitem: { type: "string" },
+              fibercontent: { type: "string" },
+              yards: { type: "string" },
+              width: { type: "string" },
+              shadelotnbr: { type: "string" },
+              vendor: { type: "string" },
+              allocatedyards: { type: "string" },
+              loadernumber: { type: "string" },
+              selecttopull: { type: "string" },
+              pulledby: { type: "string" },
+              pulltimestamp: { type: "string" },
+						}
+					}
+				},
+				// pageSize: 16
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+             selectable: true, 
+             field: "Select",
+              // title: "<input type='checkbox' id='mainCheckbox'/>",
+              title: "<input type='checkbox' id=''/>",
+              template: "<input type='checkbox' class='parent_div'/>",
+              width: "50px"
+          },
+				{
+					field: "rollcase",
+					title: "Roll Case",
+          width: "80px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}'/>",
+				},
+				{
+					field: "binlocation",
+					title: "Bin Location",
+          width: "100px",
+					template: "<input type='text' style='width: 100%;' value='${binlocation}'/>",
+				},
+				{
+					field: "aramarkitem",
+					title: "Aramark Item",
+          width: "120px",
+					template: "<input type='text' style='width: 100%;' value='${aramarkitem}'/>",
+				},
+				{
+					field: "fibercontent",
+					title: "Fiber Content",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${fibercontent}'/>",
+				},
+				{
+					field: "yards",
+					title: "Yards",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${yards}'/>",
+				},
+				{
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}'/>",
+				},
+				{
+					field: "shadelotnbr",
+					title: "Shade LotNbr",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${shadelotnbr}'/>",
+				},
+        {
+					field: "vendor",
+					title: "Vendor",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${vendor}'/>",
+				},
+        {
+					field: "allocatedyards",
+					title: "Allocated Yards",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${allocatedyards}'/>",
+				},
+        {
+					field: "loadernumber",
+					title: "Loader Number",
+          width: "100px",
+          template: "<select class='form-control'><option>0</option><option selcted>1</option><option class='mb-color-red'>2 </option><option>3</option></select>",
+				},
+        // {
+				// 	field: "selecttopull",
+				// 	title: "Select To Pull",
+        //   width: "100px",
+        //   template: "<input type='checkbox' ${selecttopull}/>",
+				// },        
+        {
+					field: "pulledby",
+					title: "Pulled By",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${pulledby}'/>",
+				},
+				{
+					field: "pulltimestamp",
+					title: "Pull TimeStamp",
+          template: "<input type='checkbox' ${pulltimestamp}/>",
+          width: "120px",
+          filterable: false,
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 3 -->
+
+
+
+<script>
+  // <!-- data grid 4 -->
+	var data4 = [
+	{
+		srlno: '1',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+	{
+		srlno: '2',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '3',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '4',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '5',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '6',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '7',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '8',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '9',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '10',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '11',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '12',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '13',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '14',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '15',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '16',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+  {
+		srlno: '17',
+		rollcase: '25561802',
+		binlocation: '112-001-022',
+		aramarkitem: 'FW253YG0410660',
+		originalyards: '100% POLYESTOR',
+		width: '65',
+		vendor: 'Costwold',
+    allocatedyards: '117',
+    loadernumber:'',
+		consume: '',
+		consumptiontype: '',
+		unusedyards: '0',
+		yardsconsumed: '90',
+		diff: '0',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid4").kendoGrid({
+			dataSource: {
+				data: data4,
+				schema: {
+					model: {
+						fields: {
+              srlno: { type: "string" },
+              rollcase: { type: "string" },
+              binlocation: { type: "string" },
+              aramarkitem: { type: "string" },
+              originalyards: { type: "string" },
+              width: { type: "string" },
+              vendor: { type: "string" },
+              allocatedyards: { type: "string" },
+              loadernumber: { type: "string" },
+              consume: { type: "string" },
+              consumptiontype: { type: "string" },
+              unusedyards: { type: "string" },
+              yardsconsumed: { type: "string" },
+              diff: { type: "string" },
+						}
+					}
+				},
+				// pageSize: 16
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+             selectable: true, 
+             field: "Select",
+              // title: "<input type='checkbox' id='mainCheckbox'/>",
+              title: "<input type='checkbox' id=''/>",
+              template: "<input type='checkbox' class='parent_div'/>",
+              width: "50px"
+          },
+				{
+					field: "rollcase",
+					title: "Roll Case",
+          width: "80px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}'/>",
+				},
+				{
+					field: "binlocation",
+					title: "Bin Location",
+          width: "100px",
+					template: "<input type='text' style='width: 100%;' value='${binlocation}'/>",
+				},
+				{
+					field: "aramarkitem",
+					title: "Aramark Item",
+          width: "120px",
+					template: "<input type='text' style='width: 100%;' value='${aramarkitem}'/>",
+				},
+				{
+					field: "originalyards",
+					title: "Color",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${originalyards}'/>",
+				},
+        {
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}'/>",
+				},
+        {
+					field: "vendor",
+					title: "Vendor",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${vendor}'/>",
+				},
+				{
+					field: "allocatedyards",
+					title: "Allocated Yards",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${allocatedyards}'/>",
+				},
+				{
+					field: "loadernumber",
+					title: "Loader Number",
+          width: "100px",
+          template: "<select class='form-control'><option>0</option><option selcted>1</option><option class='mb-color-red'>2 </option><option>3</option></select>",
+				},
+				
+				{
+					field: "consumptiontype",
+					title: "Consumption Type",
+          width: "120px",
+          template: "<select class='form-control'><option>Complete</option><option selcted>Partialy</option><option class='mb-color-red'>Incomplete </option><option>Selective</option></select>",
+				},
+        {
+					field: "unusedyards",
+					title: "Unused Yards",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${unusedyards}'/>",
+				},
+        
+        {
+					field: "yardsconsumed",
+					title: "Yards Consumed",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${yardsconsumed}'/>",
+				},
+        {
+					field: "diff",
+					title: "Diff.",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${diff}'/>",
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 4 -->
+
+
+<script>
+  // <!-- data grid 5 -->
+	var data5 = [
+	{
+		srlno: '1',
+		rollcase: '25561802',
+		cutorder: '10194T',
+    vendor: 'WESTEX INC',
+		style: 'AMPG11',
+		color: '070',
+    aramarkitem: 'FW253YG0410660',
+    LotNbr: '01434',
+		width: '51',
+    dateconsumed: '10/10/2017',
+    returnn:'',
+		newbinlocation: '',
+		onhandyards: '',
+		tablenumber: '',
+	},
+  {
+		srlno: '2',
+		rollcase: '25561802',
+		cutorder: '10194T',
+    vendor: 'WESTEX INC',
+		style: 'AMPG11',
+		color: '070',
+    aramarkitem: 'FW253YG0410660',
+    LotNbr: '01434',
+		width: '51',
+    dateconsumed: '10/10/2017',
+    returnn:'',
+		newbinlocation: '',
+		onhandyards: '',
+		tablenumber: '',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid5").kendoGrid({
+			dataSource: {
+				data: data5,
+				schema: {
+					model: {
+						fields: {
+              srlno: { type: "string" },
+              rollcase: { type: "string" },
+              cutorder: { type: "string" },
+              vendor: { type: "string" },
+              style: { type: "string" },
+              color: { type: "string" },
+              aramarkitem: { type: "string" },
+              lotnbr: { type: "string" },
+              width: { type: "string" },
+              dateconsumed: { type: "string" },
+              returnn: { type: "string" },
+              newbinlocation: { type: "string" },
+              onhandyards: { type: "string" },
+              tablenumber: { type: "string" },
+						}
+					}
+				},
+				// pageSize: 16
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+             selectable: true, 
+             field: "Select",
+              // title: "<input type='checkbox' id='mainCheckbox'/>",
+              title: "<input type='checkbox' id=''/>",
+              template: "<input type='checkbox' class='parent_div'/>",
+              width: "50px"
+          },
+				{
+					field: "rollcase",
+					title: "Roll Case",
+          width: "80px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}'/>",
+				},
+				{
+					field: "cutorder",
+					title: "Cut Order",
+          width: "80px",
+					template: "<input type='text' style='width: 100%;' value='${cutorder}'/>",
+				},
+        {
+					field: "vendor",
+					title: "Vendor",
+          width: "80px",
+          template: "<input type='text' style='width: 100%;' value='${vendor}'/>",
+				},
+				{
+					field: "style",
+					title: "Style",
+          width: "80px",
+					template: "<input type='text' style='width: 100%;' value='${style}'/>",
+				},
+				{
+					field: "color",
+					title: "Color",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${color}'/>",
+				},
+        {
+					field: "aramarkitem",
+					title: "Aramark Item",
+          width: "120px",
+          template: "<input type='text' style='width: 100%;' value='${aramarkitem}'/>",
+				},
+        
+				{
+					field: "lotnbr",
+					title: "Lot Nbr",
+          width: "80px",
+          template: "<input type='text' style='width: 100%;' value='${lotnbr}'/>",
+				},
+        {
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}'/>",
+				},
+				{
+					field: "dateconsumed",
+					title: "Date Consumed",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${dateconsumed}'/>",
+				},
+				
+        {
+					field: "newbinlocation",
+					title: "New Bin Loacation",
+          width: "120px",
+          template: "<select class='form-control'><option> </option><option selcted>1</option><option class='mb-color-red'>2 </option><option>3</option></select>",
+				},
+        {
+					field: "onhandyards",
+					title: "OnHand Yards",
+          width: "100px",
+          template: "<select class='form-control'><option>10</option><option selcted>20</option><option class='mb-color-red'>30 </option><option>40</option></select>",
+				},
+        
+        {
+					field: "tablenumber",
+					title: "Table Number",
+          width: "120px",
+          template: "<select class='form-control'><option>0</option><option selcted>1</option><option class='mb-color-red'>2 </option><option>3</option></select>",
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 5 -->
+
+
+<script>
+  $(document).ready(function() {
+      var tooltip = $("#agglomerations").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+      var tooltip = $("#agglomerations2").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+      var tooltip = $("#agglomerations3").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+
+      // tooltip.show($("#canton"));
+
+      $("#agglomerations").find("a").click(false);
+      $("#agglomerations2").find("a").click(false);
+      $("#agglomerations3").find("a").click(false);
+
+//       $('.expandAllitems').on('click', function () {
+//     $('.side-menu .panel-collapse').collapse('toggle');
+//     console.log("clicked");
+// });
+  });
+
+  $(document).ready(function(){
+
+   
+    
+     $('#mainCheckbox').change(function () {
+        if ($(this).prop('checked')) {
+          $('input.parent_div[type="checkbox"]').prop('checked', true);
+        } else {
+          $('input.parent_div[type="checkbox"]').prop('checked', false);
+        }
+      });
+
+});
+
+</script>
+<!-- Pre Qual -->
+  </body>
+</html>

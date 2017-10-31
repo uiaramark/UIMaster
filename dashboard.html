@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>Welcome | Aramark</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-big-grid/css/bootstrap-big-grid.min.css" rel="stylesheet">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- Kendo CSS-->
+    <!--<link href="kendo/kendo-css/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="kendo/kendo-css/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.common.min.css" />-->
+    <!--<link rel="stylesheet" href="kendo-css/kendo.default.min.css" />-->
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.default-v2.min.css" />
+    <!--<link rel="stylesheet" href="kendo-css/kendo.mobile.all.min.css" />-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body class="aramrk-landFrame">
+    <div class="loader"></div>
+    <nav class="navbar navbar-expand-lg fixed-top armrk-landNavbar">
+      <a class="navbar-brand" href="#">
+        <img src="img/aramark_logo.png"  class="d-inline-block align-top logo" alt=""> <span class="tagline">AGS ERP</span>
+      </a>
+          
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse top-header-menu" id="navbarTogglerDemo01">
+        
+
+        <ul class="navbar-nav mr-0 nav nav-tabs  aramrk-header-navbar">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Secure 360</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Master</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard-fabricreceiving.html">Raw Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manufacturing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Staging</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order Fulfilment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Purchase Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cut Specials</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto aramrk-header-navbar">
+          <li class="nav-item active">
+            <a class="nav-link link" aria-hidden="true" data-toggle="modal" data-target="#configAdminmodal"><span class="oi oi-cog" title="Configure Tabs" ></span></a>
+          </li>
+        </ul>
+
+
+        <ul class="navbar-nav  justify-content-end language-switch">
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle c-language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              English
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Spanish</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown aramrk-header-user"> 
+            <a class="nav-link dropdown-toggle c-language" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="img/icn_userdefault.png" width="30" height="30" class="img-fluid rounded-circle profPic" alt="Generic placeholder thumbnail">John Smith
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <!--<a class="dropdown-item" href="#">User profile</a>-->
+              <a class="dropdown-item" href="signin.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid armrk-landFluid">
+      <!--<div class="row">-->
+        <div class="row">
+          <div class="menu-row col-sm-3 col-md-2 d-none d-sm-block bg-light card-box-shadow sidebar ">
+                  <!-- Menu -->
+              <div class="side-menu">
+              
+                <nav class="side-menu-container" role="navigation">
+                  <!--<nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">-->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                
+                <!-- Main Menu -->
+                <!--<div class="">-->
+                    <ul class="nav navbar-nav">
+
+                      <span class="sidebar-toggle">
+                                <span class="oi oi-menu expandMenu"></span>
+                                <span class="fa fa-arrow-left pull-right collapseMenu"></span>
+                            </span>
+                            <span class="sidebar-items-collapsable">
+                                <span class="expandAllitems"><i class="fa fa fa-caret-down"></i> Expand All</span>
+                                <span class="pull-right collapseAllitems"><i class="fa fa fa fa-caret-right"></i> Collapse All</span>
+                            </span>
+                        <!-- Dropdown-->
+                        <li class="panel panel-default" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-Activities">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Item Master</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-Activities" class="panel-collapse collapse dropdown-lvl">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a href="#">
+                                                <!--  Level--> 
+                                                Level 1
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a data-toggle="collapse" href="#dropdown-upldbus">
+                                                Level 1
+                                                
+                                            </a>
+                                            <div id="dropdown-upldbus" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Planning</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Purchasing</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">T</i><span>Tracking</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-thirdpartymgmt">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Fabric &amp; Inventory Control</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-thirdpartymgmt" class="panel-collapse dropdown-lvl collapse ">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+                                         <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-inventorycontrol.html">
+                                                Inventory Control 
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default"   id="dropdown" >
+                                            <a href="dashboard-fabricreceiving.html">
+                                                Fabric Receiving
+                                            </a>
+                                        </li>
+
+
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-fabriccontrol.html">
+                                                Fabric Control 
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-fabricplanning.html">
+                                                Fabric Planning
+                                            </a>
+                                        </li>
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard.html">
+                                                Reports
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                <!-- /.navbar-collapse -->
+                </nav>
+              
+              </div>
+          </div>
+        <main class="col-sm pt-3 pb-4 extendedMain" role="main">
+          <nav class="breadcrumb">
+            <!--<a class="breadcrumb-item" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i> Home</a> 
+            <a class="breadcrumb-item">|</a> 
+            <a class="breadcrumb-item" href="#">Raw Material <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a class="breadcrumb-item" href="#">Inventory <i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
+            <span class="breadcrumb-item active">Home</span>
+          </nav>
+
+          <div class="clearfix">
+            
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+              This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+              This is a secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+              This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert alert-light alert-dismissible fade show" role="alert">
+              This is a light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="alert alert-dark alert-dismissible fade show" role="alert">
+              This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+          </div>
+
+          <div class="clearfix">
+                  <button class="btn btn-primary" id="btn-confirm">Confirm</button>
+
+                  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id="myModalLabel">Confirm Task</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" id="modal-btn-si">No</button>
+                          <button type="button" class="btn btn-primary" id="modal-btn-no">Yes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="alert" role="alert" id="result"></div>
+
+           
+          </div>
+
+         
+        </main>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--<script src="kendo/kendo-js/jquery.min.js"></script>-->
+    <!--<script src="js/bootstrap.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="kendo/kendo-js/kendo.all.min.js"></script>
+    <script src="js/multiselect.min.js"></script>
+    <script src="js/aramark-cust.js"></script>
+     <script>
+       
+                $(document).ready(function() {
+                    $("#tabstrip").kendoTabStrip({
+                        animation:  {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+
+                      // hack for iPhone 7.0.3 multiselects bug
+                      if(navigator.userAgent.match(/iPhone/i)) {
+                          $('select[multiple]').each(function(){
+                              var select = $(this).on({
+                                  "focusout": function(){
+                                      var values = select.val() || [];
+                                      setTimeout(function(){
+                                          select.val(values.length ? values : ['']).change();
+                                      }, 1000);
+                                  }
+                              });
+                              var firstOption = '<option value="" disabled="disabled"';
+                              firstOption += (select.val() || []).length > 0 ? '' : ' selected="selected"';
+                              firstOption += '>Select ' + (select.attr('title') || 'Options') + '';
+                              firstOption += '</option>';
+                              select.prepend(firstOption);
+                          });
+                      }
+
+                      $('#multiselectmain').multiselect();
+                      $('#multiselectsub').multiselect();
+
+
+            function detailInit(e) {
+              var detailRow = e.detailRow;
+
+              detailRow.find(".tabstrip").kendoTabStrip({
+                animation: {
+                  open: { effects: "fadeIn" }
+                }
+              });
+
+            }
+
+            var modalConfirm = function(callback){
+  
+              $("#btn-confirm").on("click", function(){
+                $("#mi-modal").modal('show');
+              });
+
+              $("#modal-btn-si").on("click", function(){
+                callback(true);
+                $("#mi-modal").modal('hide');
+              });
+              
+              $("#modal-btn-no").on("click", function(){
+                callback(false);
+                $("#mi-modal").modal('hide');
+              });
+            };
+
+            modalConfirm(function(confirm){
+              if(confirm){
+                //Acciones si el usuario confirma
+                $("#result").html('<div class="alert alert-danger alert-dismissible fade show" role="alert">Not Confirmed<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+              }else{
+                //Acciones si el usuario no confirma
+                $("#result").html('<div class="alert alert-success alert-dismissible fade show" role="alert">Confirmed<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+              }
+            });
+
+ });
+</script>
+<!-- Pre Qual -->
+
+
+<!--modal config-->
+ <div class="modal fade modal-fullscreen armark-modal-admin-config" id="configAdminmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+       
+      <div class="modal-content">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close"><img src="img/icons/icon_close.png"></button>
+        <div class="modal-header">
+          <h4 class="modal-title ml-auto mr-auto" id="myModalLabel">Configure Tabs</h4>
+          
+        </div>
+        <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <h4 class="pb-3">General Tabs</h4>
+                <div class="row">
+                    <div class="col-6">
+                       <h5>&nbsp;</h5>
+                        <select name="from[]" id="multiselectmain" class="form-control" size="8" multiple="multiple" style="display: none;">
+                        </select>
+
+                         <select name="to[]" id="multiselectmain_to" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Secure 360</option>
+                            <option value="2">Master</option>
+                            <option value="3">Raw Material</option>
+                            <option value="4">Manufacturing</option>
+                            <option value="5">Staging</option>
+                            <option value="5">Order Fulfilment</option>
+                            <option value="5">Purchase Orders</option>
+                            <option value="5">Cut Specials</option>
+                        </select>
+
+                        <div>
+                           <div class="custFields  mt-2 float-left">
+                              <label for="simple-input" class="mt-1 mr-2" ><b>New</b></label>
+                            </div>
+                            <div class="col col-8 custFields float-left mt-2">
+                              <input id="simple-input" type="text" class="k-textbox" style="width: 100%;" />
+                            </div>
+                              <span class="btn-green mt-2">+</span>    
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-6">
+                      <ul class="controller-list">
+                          <li><span id="multiselectmain_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                          <li><span class="" >Selected Tab <b>Raw Material</b></span></li>
+                          <li><span class="chip" >Make Default</span></li>
+                          <li><span id="multiselectmain_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                          <li><span class="btn-red" >X</span>           </li>
+                      </ul>           
+                    </div>
+                </div>
+              </div>
+              <div class="col-7">
+                <h4 class="pb-3">Selected Sub -  Tabs</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                      <label><b>Available</b></label>
+                        <select name="from[]" id="multiselectsub" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Inventory Control</option>
+                            <option value="2">Fabric Receiving</option>
+                            <option value="3">Fabric Control</option>
+                            <option value="4">Receiving</option>
+                            <option value="5">Tab place holder</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_rightSelected" class="btn-arrow"><i class="oi oi-caret-right"></i></span></li>
+                        <li><span id="multiselectsub_leftSelected" class="btn-arrow"><i class="oi oi-caret-left"></i></span></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                       <label><b>Selected</b></label>
+                        <select name="to[]" id="multiselectsub_to" class="form-control multipleContainer" size="8" multiple="multiple"></select>
+                    </div>
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                        <li><span id="multiselectsub_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger armrk-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end of modal config-->
+  </body>
+</html>

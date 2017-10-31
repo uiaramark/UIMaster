@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>Raw Material Receiving | Aramark</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-big-grid/css/bootstrap-big-grid.min.css" rel="stylesheet">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!--[if !mso]><!-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!--<![endif]-->
+
+    <!-- Kendo CSS-->
+    <!--<link href="kendo/kendo-css/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="kendo/kendo-css/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.common.min.css" />-->
+    <!--<link rel="stylesheet" href="kendo-css/kendo.default.min.css" />-->
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.default-v2.min.css" />
+    <!--<link rel="stylesheet" href="kendo-css/kendo.mobile.all.min.css" />-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body class="aramrk-landFrame">
+    <div class="loader"></div>
+    <nav class="navbar navbar-expand-lg fixed-top armrk-landNavbar">
+      <a class="navbar-brand" href="#">
+        <img src="img/aramark_logo.png"  class="d-inline-block align-top logo" alt=""> <span class="tagline">AGS ERP</span>
+      </a>
+          
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse top-header-menu" id="navbarTogglerDemo01">
+        
+
+        <ul class="navbar-nav mr-0 nav nav-tabs  aramrk-header-navbar">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Secure 360</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Master</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="dashboard-fabricreceiving.html">Raw Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manufacturing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Staging</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order Fulfilment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Purchase Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cut Specials</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto aramrk-header-navbar">
+          <li class="nav-item active">
+            <a class="nav-link link" aria-hidden="true" data-toggle="modal" data-target="#configAdminmodal"><span class="oi oi-cog" title="Configure Tabs" ></span></a>
+          </li>
+        </ul>
+
+
+        <ul class="navbar-nav  justify-content-end language-switch">
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle c-language" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              English
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Spanish</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown aramrk-header-user"> 
+            <a class="nav-link dropdown-toggle c-language" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="img/icn_userdefault.png" width="30" height="30" class="img-fluid rounded-circle profPic" alt="Generic placeholder thumbnail">John Smith
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <!--<a class="dropdown-item" href="#">User profile</a>-->
+              <a class="dropdown-item" href="signin.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid armrk-landFluid">
+      <!--<div class="row">-->
+        <div class="row">
+          <div class="menu-row col-sm-3 col-md-2 d-none d-sm-block bg-light card-box-shadow sidebar ">
+                  <!-- Menu -->
+              <div class="side-menu">
+              
+                <nav class="side-menu-container" role="navigation">
+                  <!--<nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">-->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                
+                <!-- Main Menu -->
+                <!--<div class="">-->
+                    <ul class="nav navbar-nav">
+
+                      <span class="sidebar-toggle">
+                                <span class="oi oi-menu expandMenu"></span>
+                                <span class="fa fa-arrow-left pull-right collapseMenu"></span>
+                            </span>
+                            <span class="sidebar-items-collapsable">
+                                <span class="expandAllitems"><i class="fa fa fa-caret-down"></i> Expand All</span>
+                                <span class="pull-right collapseAllitems"><i class="fa fa fa fa-caret-right"></i> Collapse All</span>
+                            </span>
+                        <!-- Dropdown-->
+                        <li class="panel panel-default" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-Activities">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Item Master</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-Activities" class="panel-collapse collapse dropdown-lvl">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a href="#">
+                                                <!--  Level--> 
+                                                Level 1
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a data-toggle="collapse" href="#dropdown-upldbus">
+                                                Level 1
+                                                
+                                            </a>
+                                            <div id="dropdown-upldbus" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Planning</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Purchasing</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">T</i><span>Tracking</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default active" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-thirdpartymgmt" aria-expanded="true">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Fabric &amp; Inventory Control</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-thirdpartymgmt" class="panel-collapse dropdown-lvl collapse show">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+                                        
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-inventorycontrol.html">
+                                                Inventory Control 
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default active"   id="dropdown" >
+                                            <a href="dashboard-fabricreceiving.html">
+                                                Fabric Receiving
+                                            </a>
+                                        </li>
+
+
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-fabriccontrol.html">
+                                                Fabric Control 
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-fabricplanning.html">
+                                                Fabric Planning
+                                            </a>
+                                        </li>
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard.html">
+                                                Reports
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                <!-- /.navbar-collapse -->
+                </nav>
+              
+              </div>
+          </div>
+        <main class="col-sm pt-3 pb-4 extendedMain" role="main">
+         <div class="row">
+           <div class="col-sm-6">
+             <nav class="breadcrumb">
+               <a class="breadcrumb-item" disabled><i class="fa fa-angle-left" aria-hidden="true"></i></a> 
+              <a class="breadcrumb-item" href="dashboard.html"> Home</a> 
+              <a class="breadcrumb-item" disabled>|</a> 
+              <a class="breadcrumb-item" href="#">Raw Material </a>
+              <a class="breadcrumb-item" disabled><i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+              <a class="breadcrumb-item" href="#">Fabric &amp; Inventory Control </a>
+              <a class="breadcrumb-item" disabled><i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+              <span class="breadcrumb-item active">Fabric Receiving</span>
+            </nav>
+          </div>
+            <div class="col-sm-6">
+              <div id="agglomerations" class="agglomerations text-right">
+                
+                <span title="Help" id="moscow"><img src="img/icn_help.png" class="icon-top"></span>
+
+                <span title="Add" id="moscow"><img src="img/icn_addrec.png" class="icon-top"></span>
+
+                <span title="Refresh" id="moscow"><img src="img/icn_refresh.png" class="icon-top"></span>
+
+                <span title="Rewind" id="moscow"><img src="img/icn_rewind.png" class="icon-top"></span>
+
+                <span title="DoCopy" id="moscow"><img src="img/icn_docopy.png" class="icon-top"></span>
+
+                <span title="CopyRepo" id="moscow"><img src="img/icn_copyrepo.png" class="icon-top"></span>
+
+                <span title="Window" id="moscow"><img src="img/icn_window.png" class="icon-top"></span>
+
+                <span title="Print" id="moscow"><img src="img/icn_print.png" class="icon-top"></span>
+             </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+          <div class="row">
+           
+            <div class="col-sm-12">
+            
+                   <div class="aramark-tabs k-content card-box-shadow">
+                        <div id="tabstrip">
+                            <ul>
+                                <li class="k-state-active">
+                                    Receiving
+                                </li>
+                                <li>
+                                    Receipt
+                                </li>
+                                <li>
+                                    Lookup
+                                </li>
+                            </ul>
+                            <!--tab Receiving-->
+                            <div class="tab-container">
+                                <div class="row custForm clearfix">
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="inputEmail3" class="col-sm-5 col-form-label">Container ID</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input type="text" class="form-control k-textbox" id="inputEmail3" placeholder="Container ID" value="18990">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">PO#</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="18990"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Vendor ID</label>
+                                        <div class="col-sm-7 custFields">
+                                          <select id="size" class="form-control" >
+                                            <option></option>
+                                            <option>MILLIKEN | 17</option>
+                                            <option>DULOS | 25 </option>
+                                            <option>Alexander Fabrics Inc. | 26 </option>
+                                            <option>HAMPTON PAPER | 68</option>
+                                            <option>DOUBLETEX | 247</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Rolls</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Yards</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value=""/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Billing of Lading</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value=""/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Container</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Shipments</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">ASN</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"   value="" />
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <textarea id="simple-textarea" rows="4" class="form-control"  placeholder="Comments" ></textarea>
+                                  </div>
+                                </div>
+                                
+                                
+                                <div id="grid" class="clearfix"></div>
+                                <form class="armrk-tbl-footer custFields form-inline clearfix">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Total Rolls:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Total Yards</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>
+                                  
+                                </form>
+                            </div>
+                            <!--end of tab Receiving-->
+
+                            <!--tab Receipt-->
+                             <div class="tab-container">
+                                <div class="row custForm clearfix">
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Receipt ID</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="30131" disabled/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Received Date</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox" value="10/06/2017" disabled/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Vendor ID</label>
+                                        <div class="col-sm-7 custFields">
+                                          <select id="size"  class="form-control k-textbox">
+                                            <option>MILLIKEN | 17</option>
+                                            <option>DULOS | 25 </option>
+                                            <option>Alexander Fabrics Inc. | 26 </option>
+                                            <option>HAMPTON PAPER | 68</option>
+                                            <option>DOUBLETEX | 247</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Rolls</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"  class="form-control k-textbox"  value="2" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Yards</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox" value="18"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Billing of Lading</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox" value="122"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Container</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox" value="178043" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Shipments</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox" value="2323" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">ASN</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text" class="form-control k-textbox"  value="178043" />
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <textarea id="simple-textarea" rows="4" class="form-control" placeholder="Comments" >Some comments lines</textarea>
+                                  </div>
+                                </div>
+                          
+                                <div id="grid2"  class="clearfix"></div>
+                                
+                                 <form class="armrk-tbl-footer custFields form-inline clearfix">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Total Rolls:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Total Yards</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>                                  
+                                </form>
+                            </div>
+                            <!--end of tab Receipt-->
+          
+                            <!--tab Lookup-->
+                             <div class="tab-container">
+                                <div class="row custForm clearfix">
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Receipt ID</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox" value="30131" disabled />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Received Date</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox" value="10/06/2017" disabled/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Vendor ID</label>
+                                        <div class="col-sm-7 custFields">
+                                          <select id="size" class="form-control k-textbox" disabled>
+                                            <option>MILLIKEN | 17</option>
+                                            <option>DULOS | 25 </option>
+                                            <option>Alexander Fabrics Inc. | 26 </option>
+                                            <option>HAMPTON PAPER | 68</option>
+                                            <option>DOUBLETEX | 247</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Rolls</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox" value="2" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Total Yards</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox" value="18"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Billing of Lading</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox" value="122"/>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Container</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox" value="178043" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">Shipments</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox" value="2323" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row custFormrow">
+                                        <label for="staticEmail" class="col-sm-5 col-form-label">ASN</label>
+                                        <div class="col-sm-7 custFields">
+                                          <input id="simple-input" type="text"class="form-control k-textbox"  value="178043" />
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <textarea id="simple-textarea" rows="4" class="form-control"  placeholder="Comments" ></textarea>
+                                  </div>
+                                </div>
+                                
+                                <div id="grid3"  class="clearfix"></div>
+                                 <form class="armrk-tbl-footer custFields form-inline clearfix">
+                                  <div class="form-group">
+                                    <label for="staticEmail2" class="">Total Rolls:</label>
+                                    <input type="text" class="k-textbox" id="" value="0">
+                                  </div>
+                                  <div class="form-group  mr-auto">
+                                    <label for="inputPassword2" class="">Total Yards</label>
+                                    <input type="text" class="k-textbox" id=""  value="0">
+                                  </div>
+                                  
+                                </form>
+                            </div>
+                            <!--end of tab Lookup-->
+                        </div>
+                    <div class="clearfix"></div>
+                    
+               
+            </div>
+
+          </div>
+
+         
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--<script src="kendo/kendo-js/jquery.min.js"></script>-->
+    <!--<script src="js/bootstrap.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="kendo/kendo-js/kendo.all.min.js"></script>
+    <script src="js/multiselect.min.js"></script>
+    <script src="js/aramark-cust.js"></script>
+     <script>
+                $(document).ready(function() {
+                    $("#tabstrip").kendoTabStrip({
+                        animation:  {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+               
+
+                 // hack for iPhone 7.0.3 multiselects bug
+                      if(navigator.userAgent.match(/iPhone/i)) {
+                          $('select[multiple]').each(function(){
+                              var select = $(this).on({
+                                  "focusout": function(){
+                                      var values = select.val() || [];
+                                      setTimeout(function(){
+                                          select.val(values.length ? values : ['']).change();
+                                      }, 1000);
+                                  }
+                              });
+                              var firstOption = '<option value="" disabled="disabled"';
+                              firstOption += (select.val() || []).length > 0 ? '' : ' selected="selected"';
+                              firstOption += '>Select ' + (select.attr('title') || 'Options') + '';
+                              firstOption += '</option>';
+                              select.prepend(firstOption);
+                          });
+                      }
+
+                      $('#multiselectmain').multiselect();
+                      $('#multiselectsub').multiselect();
+                   });
+            </script>
+
+           <!--modal config-->
+ <div class="modal fade modal-fullscreen armark-modal-admin-config" id="configAdminmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+       
+      <div class="modal-content">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close"><img src="img/icons/icon_close.png"></button>
+        <div class="modal-header">
+          <h4 class="modal-title ml-auto mr-auto" id="myModalLabel">Configure Tabs</h4>
+          
+        </div>
+        <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <h4 class="pb-3">General Tabs</h4>
+                <div class="row">
+                    <div class="col-6">
+                       <h5>&nbsp;</h5>
+                        <select name="from[]" id="multiselectmain" class="form-control" size="8" multiple="multiple" style="display: none;">
+                        </select>
+
+                         <select name="to[]" id="multiselectmain_to" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Secure 360</option>
+                            <option value="2">Master</option>
+                            <option value="3">Raw Material</option>
+                            <option value="4">Manufacturing</option>
+                            <option value="5">Staging</option>
+                            <option value="5">Order Fulfilment</option>
+                            <option value="5">Purchase Orders</option>
+                            <option value="5">Cut Specials</option>
+                        </select>
+
+                        <div>
+                           <div class="custFields  mt-2 float-left">
+                              <label for="simple-input" class="mt-1 mr-2" ><b>New</b></label>
+                            </div>
+                            <div class="col col-8 custFields float-left mt-2">
+                              <input id="simple-input" type="text" class="k-textbox" style="width: 100%;" />
+                            </div>
+                              <span class="btn-green mt-2">+</span>    
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-6">
+                      <ul class="controller-list">
+                          <li><span id="multiselectmain_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                          <li><span class="" >Selected Tab <b>Raw Material</b></span></li>
+                          <li><span class="chip" >Make Default</span></li>
+                          <li><span id="multiselectmain_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                          <li><span class="btn-red" >X</span>           </li>
+                      </ul>           
+                    </div>
+                </div>
+              </div>
+              <div class="col-7">
+                <h4 class="pb-3">Selected Sub -  Tabs</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                      <label><b>Available</b></label>
+                        <select name="from[]" id="multiselectsub" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Inventory Control</option>
+                            <option value="2">Fabric Receiving</option>
+                            <option value="3">Fabric Control</option>
+                            <option value="4">Receiving</option>
+                            <option value="5">Tab place holder</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_rightSelected" class="btn-arrow"><i class="oi oi-caret-right"></i></span></li>
+                        <li><span id="multiselectsub_leftSelected" class="btn-arrow"><i class="oi oi-caret-left"></i></span></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                       <label><b>Selected</b></label>
+                        <select name="to[]" id="multiselectsub_to" class="form-control multipleContainer" size="8" multiple="multiple"></select>
+                    </div>
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                        <li><span id="multiselectsub_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger armrk-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end of modal config-->
+           
+<!-- Pre Qual -->
+<script type="text/x-kendo-template" id="template1">
+	<div class="tabstrip">
+		<ul>
+			<li class="k-state-active">
+				Loan Detail 
+			</li>
+			<li>Date</li>
+			<li>Investor</li>
+		</ul>
+		<div>
+			<div class="orders">
+				<div class="row mb-margin-tb-lg">
+
+					<ul class="col-sm-5">
+						<li><label>Loan Product: </label></li>
+						<li><label>Occupancy: </label></li>
+						<li><label>LTV: </label></li>
+					</ul>
+					<ul class="col-sm-6">
+						<li><label>Loan Purpose: </label></li>
+						<li><label>Lien Position: </label></li>
+						<li><label>CLTV: </label></li>
+						
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div>
+			<div class="orders">
+				<div class="row mb-margin-tb-lg">
+
+					<ul class="col-sm-5">
+						<li><label>Application Date: </label></li>
+						<li><label>Lock Date: </label></li>
+						<li><label>Borrower FICO: </label></li>
+					</ul>
+					<ul class="col-sm-6">
+						<li><label>Closing date: </label></li>
+						<li><label>Lock Expiration date: </label></li>
+						<li><label>Co-Borrower FICO: </label></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div>
+			<div class="orders">
+				<div class="row mb-margin-tb-lg">
+
+					<ul class="col-sm-5">
+						<li><label>Investor Loan Number: </label></li>
+						<li><label>Servicing Loan Number: </label></li>
+						<li><label>Case Number: </label></li>
+					</ul>
+					<ul class="col-sm-6">
+						<li><label>Locked Investor: </label></li>
+						<li><label>Warehouse Line: </label></li>
+						<li><label>MERS ID: </label></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+ 
+	</div>
+	</div>
+</script>
+<script>
+  // <!-- data grid 1 -->
+	var data = [
+	{
+		srlno: '1',
+		rollcase: '',
+		porelease: '',
+		podetails: '',
+		binlocation: '',
+		aramarkitemcode: '',
+		vendoritemcode: '',
+		color: '',
+		yards: '',
+		width: '',
+		lotdetails: '',
+		fibercontent: '',
+	},
+	{
+		srlno: '2',
+		rollcase: '',
+		porelease: '',
+		podetails: '',
+		binlocation: '',
+		aramarkitemcode: '',
+		vendoritemcode: '',
+		color: '',
+		yards: '',
+		width: '',
+		lotdetails: '',
+		fibercontent: '',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid").kendoGrid({
+			dataSource: {
+				data: data,
+				schema: {
+					model: {
+						fields: {
+							srlno: { type: "string" },
+							rollcase: { type: "string" },
+							porelease: { type: "string" },
+							podetails: { type: "string" },
+							binlocation: { type: "string" },
+							aramarkitemcode: { type: "string" },
+							vendoritemcode: { type: "string" },
+							color: { type: "string" },
+							yards: { type: "string" },
+							width: { type: "string" },
+							lotdetails: { type: "string" },
+							fibercontent: { type: "string" },
+						}
+					}
+				},
+				pageSize: 7
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+        {
+          selectable: true, 
+             field: "Select",
+              title: "<input type='checkbox' id='mainCheckbox'/>",
+              template: "<input type='checkbox' class='parent_div'/>",
+              width: "50px"
+        },
+				{
+					field: "srlno",
+					title: "Sr No.",
+					width: "60px",
+           template: "<input type='text' style='width: 100%;' value='${srlno}'/>",
+				},
+				{
+					field: "rollcase",
+					title: "Roll / Case",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}'/>",
+				},
+				{
+					field: "porelease",
+					title: "PO Release",
+          width: "100px",
+					template: "<select class='form-control' disabled><option> </option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "podetails",
+					title: "PO #",
+          width: "80px",
+					template: "<input type='text' style='width: 100%;' value='${podetails}' disabled/>",
+				},
+				{
+					field: "binlocation",
+					title: "Bin Location",
+          width: "110px",
+          template: "<select class='form-control'><option> </option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "aramarkitemcode",
+					title: "Aramark Itemcode",
+          width: "120px",
+          template: "<select class='form-control' disabled><option> </option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "vendoritemcode",
+					title: "Vendor Itemcode",
+          width: "120px",
+          template: "<select class='form-control'><option> </option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "color",
+					title: "Color",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${color}'/>",
+				},
+				{
+					field: "yards",
+					title: "Yards",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${yards}'/>",
+				},
+        {
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}' disabled/>",
+				},
+        {
+					field: "lotdetails",
+					title: "Lot#",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${lotdetails}'/>",
+				},
+        {
+					field: "fibercontent",
+					title: "Fiber Content",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${fibercontent}' disabled/>",
+				},
+				{
+					field: "usable",
+					title: "Usable",
+          template: "<input type='checkbox' checked='checked'/>",
+          width: "60px",
+          filterable: false,
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 1 -->
+
+
+
+
+
+<script>
+  // <!-- data grid 2 -->
+	var data2 = [
+	{
+		srlno: '1',
+		rollcase: '15496763',
+		porelease: '16907',
+		podetails: '16907',
+		binlocation: '101-001-001',
+		aramarkitemcode: 'FW326FL0240650',
+		vendoritemcode: 'DANISH NAVY',
+		color: '999',
+		yards: '100',
+		width: '62',
+		lotdetails: '2',
+		fibercontent: 'POLYESTOR',
+	},
+	{
+		srlno: '2',
+		rollcase: '15496764',
+		porelease: '17042',
+		podetails: '16907',
+		binlocation: '102-001-001',
+		aramarkitemcode: 'FW335AA0100610',
+		vendoritemcode: 'Gibb Smith',
+		color: '999',
+		yards: '100',
+		width: '64',
+		lotdetails: '3',
+		fibercontent: 'COTTON',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid2").kendoGrid({
+			dataSource: {
+				data: data2,
+				schema: {
+					model: {
+						fields: {
+							srlno: { type: "string" },
+							rollcase: { type: "string" },
+							porelease: { type: "string" },
+							podetails: { type: "string" },
+							binlocation: { type: "string" },
+							aramarkitemcode: { type: "string" },
+							vendoritemcode: { type: "string" },
+							color: { type: "string" },
+							yards: { type: "string" },
+							width: { type: "string" },
+							lotdetails: { type: "string" },
+							fibercontent: { type: "string" },
+						}
+					}
+				},
+				pageSize: 7
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+        {
+          selectable: true, 
+             field: "Select",
+              title: "<input type='checkbox' id='mainCheckbox'/>",
+              template: "<input type='checkbox' class='parent_div'/>",
+              width: "50px"
+        },
+				{
+					field: "srlno",
+					title: "Sr No.",
+					width: "60px",
+           template: "<input type='text' style='width: 100%;' value='${srlno}'/>",
+				},
+				{
+					field: "rollcase",
+					title: "Roll / Case",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}'/>",
+				},
+				{
+					field: "porelease",
+					title: "PO Release",
+          width: "100px",
+					template: "<select class='form-control'><option>16907</option><option selcted>16907</option><option class='mb-color-red'>17584 </option><option>19442</option></select>",
+				},
+				{
+					field: "podetails",
+					title: "PO #",
+          width: "80px",
+					template: "<input type='text' style='width: 100%;' value='${podetails}'/>",
+				},
+				{
+					field: "binlocation",
+					title: "Bin Location",
+          width: "110px",
+          template: "<select class='form-control'><option>Option 3</option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "aramarkitemcode",
+					title: "Aramark Itemcode",
+          width: "120px",
+          template: "<select class='form-control'><option>101-001-001</option><option>101-001-001</option><option class='mb-color-red'>102-001-001</option><option>103-001-001</option></select>",
+				},
+				{
+					field: "vendoritemcode",
+					title: "Vendor Itemcode",
+          width: "120px",
+          template: "<select class='form-control'><option>DANISH NAVY</option><option>SWRW TAN 70775</option><option class='mb-color-red'>NADAL2574</option><option>DANISH NAVY</option></select>",
+				},
+				{
+					field: "color",
+					title: "Color",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${color}'/>",
+				},
+				{
+					field: "yards",
+					title: "Yards",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${yards}'/>",
+				},
+        {
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}'/>",
+				},
+        {
+					field: "lotdetails",
+					title: "Lot#",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${lotdetails}'/>",
+				},
+        {
+					field: "fibercontent",
+					title: "Fiber Content",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${fibercontent}'/>",
+				},
+				{
+					field: "usable",
+					title: "Usable",
+          template: "<input type='checkbox' checked='checked'/>",
+          width: "60px",
+          filterable: false,
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 2 -->
+
+
+<script>
+  // <!-- data grid 3 -->
+	var data3 = [
+	{
+		srlno: '1',
+		rollcase: '123456232',
+		porelease: '123456232',
+		podetails: '123456232',
+		binlocation: '123456232',
+		aramarkitemcode: '123456789L',
+		vendoritemcode: 'Gibb Smith',
+		color: '09/09/2014',
+		yards: '10/11/2014',
+		width: '10/12/2014',
+		lotdetails: '10/10/2014',
+		fibercontent: 'Gary Wells',
+	},
+	{
+		srlno: '2',
+		rollcase: '123456232',
+		porelease: '123456232',
+		podetails: '123456232',
+		binlocation: '123456232',
+		aramarkitemcode: '123456789L',
+		vendoritemcode: 'Gibb Smith',
+		color: '09/09/2014',
+		yards: '10/11/2014',
+		width: '10/12/2014',
+		lotdetails: '10/10/2014',
+		fibercontent: 'Gary Wells',
+	},
+	{
+		srlno: '3',
+		rollcase: '123456232',
+		porelease: '123456232',
+		podetails: '123456232',
+		binlocation: '123456232',
+		aramarkitemcode: '123456789L',
+		vendoritemcode: 'Gibb Smith',
+		color: '09/09/2014',
+		yards: '10/11/2014',
+		width: '10/12/2014',
+		lotdetails: '10/10/2014',
+		fibercontent: 'Gary Wells',
+	},
+	{
+		srlno: '4',
+		rollcase: '123456232',
+		porelease: '123456232',
+		podetails: '123456232',
+		binlocation: '123456232',
+		aramarkitemcode: '123456789L',
+		vendoritemcode: 'Gibb Smith',
+		color: '09/09/2014',
+		yards: '10/11/2014',
+		width: '10/12/2014',
+		lotdetails: '10/10/2014',
+		fibercontent: 'Gary Wells',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid3").kendoGrid({
+			dataSource: {
+				data: data3,
+				schema: {
+					model: {
+						fields: {
+							srlno: { type: "string" },
+							rollcase: { type: "string" },
+							porelease: { type: "string" },
+							podetails: { type: "string" },
+							binlocation: { type: "string" },
+							aramarkitemcode: { type: "string" },
+							vendoritemcode: { type: "string" },
+							color: { type: "string" },
+							yards: { type: "string" },
+							width: { type: "string" },
+							lotdetails: { type: "string" },
+							fibercontent: { type: "string" },
+						}
+					}
+				},
+				pageSize: 7
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+        
+				{
+					field: "srlno",
+					title: "Sr No.",
+					width: "60px",
+           template: "<input type='text' style='width: 100%;' value='${srlno}' disabled/>",
+				},
+				{
+					field: "rollcase",
+					title: "Roll / Case",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${rollcase}' disabled/>",
+				},
+				{
+					field: "porelease",
+					title: "PO Release",
+          width: "100px",
+					template: "<select class='form-control' disabled><option>Option 3 </option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "podetails",
+					title: "PO #",
+          width: "80px",
+					template: "<input type='text' style='width: 100%;' value='${podetails}' disabled/>",
+				},
+				{
+					field: "binlocation",
+					title: "Bin Location",
+          width: "110px",
+          template: "<select class='form-control' disabled><option>Option 3 </option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "aramarkitemcode",
+					title: "Aramark Itemcode",
+          width: "120px",
+          template: "<select class='form-control' disabled><option> Option 3</option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "vendoritemcode",
+					title: "Vendor Itemcode",
+          width: "120px",
+          template: "<select class='form-control' disabled><option>Option 3 </option><option>Option 1</option><option class='mb-color-red'>Option 2</option><option>Option 3</option></select>",
+				},
+				{
+					field: "color",
+					title: "Color",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${color}' disabled/>",
+				},
+				{
+					field: "yards",
+					title: "Yards",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${yards}' disabled/>",
+				},
+        {
+					field: "width",
+					title: "Width",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${width}' disabled/>",
+				},
+        {
+					field: "lotdetails",
+					title: "Lot#",
+          width: "60px",
+          template: "<input type='text' style='width: 100%;' value='${lotdetails}' disabled/>",
+				},
+        {
+					field: "fibercontent",
+					title: "Fiber Content",
+          width: "100px",
+          template: "<input type='text' style='width: 100%;' value='${fibercontent}' disabled/>",
+				},
+				{
+					field: "usable",
+					title: "Usable",
+          template: "<input type='checkbox' checked='checked'  disabled/>",
+          width: "60px",
+          filterable: false,
+				},
+			]
+		});
+	});
+
+</script> <!-- data grid 3 -->
+
+
+<script>
+  $(document).ready(function() {
+      var tooltip = $("#agglomerations").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+      var tooltip = $("#agglomerations2").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+      var tooltip = $("#agglomerations3").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+
+      // tooltip.show($("#canton"));
+
+      $("#agglomerations").find("a").click(false);
+      $("#agglomerations2").find("a").click(false);
+      $("#agglomerations3").find("a").click(false);
+
+  });
+
+    $(document).ready(function(){
+
+  
+    
+     $('#mainCheckbox').change(function () {
+        if ($(this).prop('checked')) {
+          $('input.parent_div[type="checkbox"]').prop('checked', true);
+        } else {
+          $('input.parent_div[type="checkbox"]').prop('checked', false);
+        }
+      });
+
+});
+
+</script>
+<!-- Pre Qual -->
+  </body>
+</html>

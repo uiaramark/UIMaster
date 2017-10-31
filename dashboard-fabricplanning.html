@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>Raw Material Receiving | Aramark</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-big-grid/css/bootstrap-big-grid.min.css" rel="stylesheet">
+    <link href="open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!--[if !mso]><!-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!--<![endif]-->
+
+    <!-- Kendo CSS-->
+    <!--<link href="kendo/kendo-css/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="kendo/kendo-css/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.common.min.css" />-->
+    <!--<link rel="stylesheet" href="kendo-css/kendo.default.min.css" />-->
+    <link rel="stylesheet" href="kendo/kendo-css/kendo.default-v2.min.css" />
+    <!--<link rel="stylesheet" href="kendo-css/kendo.mobile.all.min.css" />-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body class="aramrk-landFrame">
+    <div class="loader"></div>
+    <nav class="navbar navbar-expand-lg fixed-top armrk-landNavbar">
+      <a class="navbar-brand" href="#">
+        <img src="img/aramark_logo.png"  class="d-inline-block align-top logo" alt=""> <span class="tagline">AGS ERP</span>
+      </a>
+          
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse top-header-menu" id="navbarTogglerDemo01">
+        
+
+        <ul class="navbar-nav mr-0 nav nav-tabs  aramrk-header-navbar">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Secure 360</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Master</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="dashboard-fabricreceiving.html">Raw Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manufacturing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Staging</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order Fulfilment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Purchase Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cut Specials</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto aramrk-header-navbar">
+          <li class="nav-item active">
+            <a class="nav-link link" aria-hidden="true" data-toggle="modal" data-target="#configAdminmodal"><span class="oi oi-cog" title="Configure Tabs" ></span></a>
+          </li>
+        </ul>
+
+
+        <ul class="navbar-nav  justify-content-end language-switch">
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown-toggle c-language" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              English
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">English</a>
+              <a class="dropdown-item" href="#">Spanish</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown aramrk-header-user"> 
+            <a class="nav-link dropdown-toggle c-language" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="img/icn_userdefault.png" width="30" height="30" class="img-fluid rounded-circle profPic" alt="Generic placeholder thumbnail">John Smith
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <!--<a class="dropdown-item" href="#">User profile</a>-->
+              <a class="dropdown-item" href="signin.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid armrk-landFluid">
+      <!--<div class="row">-->
+        <div class="row">
+          <div class="menu-row col-sm-3 col-md-2 d-none d-sm-block bg-light card-box-shadow sidebar ">
+                  <!-- Menu -->
+              <div class="side-menu">
+              
+                <nav class="side-menu-container" role="navigation">
+                  <!--<nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">-->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                
+                <!-- Main Menu -->
+                <!--<div class="">-->
+                    <ul class="nav navbar-nav">
+
+                      <span class="sidebar-toggle">
+                                <span class="oi oi-menu expandMenu"></span>
+                                <span class="fa fa-arrow-left pull-right collapseMenu"></span>
+                            </span>
+                            <span class="sidebar-items-collapsable">
+                                <span class="expandAllitems"><i class="fa fa fa-caret-down"></i> Expand All</span>
+                                <span class="pull-right collapseAllitems"><i class="fa fa fa fa-caret-right"></i> Collapse All</span>
+                            </span>
+                        <!-- Dropdown-->
+                        <li class="panel panel-default" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-Activities">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Item Master</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-Activities" class="panel-collapse collapse dropdown-lvl">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a href="#">
+                                                <!--  Level--> 
+                                                Level 1
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default" id="dropdown">
+                                            <a data-toggle="collapse" href="#dropdown-upldbus">
+                                                Level 1
+                                                
+                                            </a>
+                                            <div id="dropdown-upldbus" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                        <li><a href="#">Level 2</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Planning</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">P</i><span>Purchasing</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default" id="dropdown">
+                            <a href="#">
+                              <i class="nav-shortIcon nav-shortIcon-text">T</i><span>Tracking</span> 
+                            </a>
+                        </li>
+
+                        <li class="panel panel-default active" id="dropdown">
+                            <a data-toggle="collapse" href="#dropdown-thirdpartymgmt" aria-expanded="true">
+                              <i class="nav-shortIcon nav-shortIcon-text">I</i><span>Fabric &amp; Inventory Control</span> 
+                            </a>
+                            <!-- Dropdown level 1 -->
+                            <div id="dropdown-thirdpartymgmt" class="panel-collapse dropdown-lvl collapse show">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <!-- Dropdown level 2 -->
+                                        
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-inventorycontrol.html">
+                                                Inventory Control 
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default"   id="dropdown" >
+                                            <a href="dashboard-fabricreceiving.html">
+                                                Fabric Receiving
+                                            </a>
+                                        </li>
+
+
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard-fabriccontrol.html">
+                                                Fabric Control 
+                                            </a>
+                                        </li>
+
+                                        <li class="panel panel-default active"  id="dropdown">
+                                            <a href="dashboard-fabricplanning.html">
+                                                Fabric Planning
+                                            </a>
+                                        </li>
+                                        <li class="panel panel-default"  id="dropdown">
+                                            <a href="dashboard.html">
+                                                Reports
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                <!-- /.navbar-collapse -->
+                </nav>
+              
+              </div>
+          </div>
+        <main class="col-sm pt-3 pb-4 extendedMain" role="main">
+         <div class="row">
+           <div class="col-sm-6">
+             <nav class="breadcrumb">
+               <a class="breadcrumb-item" disabled><i class="fa fa-angle-left" aria-hidden="true"></i></a> 
+              <a class="breadcrumb-item" href="dashboard.html"> Home</a> 
+              <a class="breadcrumb-item" disabled>|</a> 
+              <a class="breadcrumb-item" href="#">Raw Material </a>
+              <a class="breadcrumb-item" disabled><i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+              <a class="breadcrumb-item" href="#">Fabric &amp; Inventory Control </a>
+              <a class="breadcrumb-item" disabled><i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+              <span class="breadcrumb-item active">Fabric Planning</span>
+            </nav>
+          </div>
+            <div class="col-sm-6">
+              <div id="agglomerations" class="agglomerations text-right">
+                
+                <span title="Help" id="moscow"><img src="img/icn_help.png" class="icon-top"></span>
+
+                <span title="Add" id="moscow"><img src="img/icn_addrec.png" class="icon-top"></span>
+
+                <span title="Refresh" id="moscow"><img src="img/icn_refresh.png" class="icon-top"></span>
+
+                <span title="Rewind" id="moscow"><img src="img/icn_rewind.png" class="icon-top"></span>
+
+                <span title="DoCopy" id="moscow"><img src="img/icn_docopy.png" class="icon-top"></span>
+
+                <span title="CopyRepo" id="moscow"><img src="img/icn_copyrepo.png" class="icon-top"></span>
+
+                <span title="Window" id="moscow"><img src="img/icn_window.png" class="icon-top"></span>
+
+                <span title="Print" id="moscow"><img src="img/icn_print.png" class="icon-top"></span>
+             </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+          <div class="row">
+           
+            <div class="col-sm-12">
+            
+                   <div class="aramark-tabs k-content card-box-shadow">
+                        <div id="tabstrip">
+                            <ul>
+                                <li class="k-state-active">
+                                    Future Watchlist
+                                </li>
+                                <li>
+                                    Fabric Watchlist
+                                </li>
+                                <li>
+                                    Fabric Planning Report
+                                </li>
+                            </ul>
+                            <!--tab Receiving-->
+                            <div class="tab-container">
+                              <div class="custForm border-bottom clearfix">
+                                 
+                                 <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Vendor</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                       <option>WESTEX INC</option>
+                                            <option>Alexander Fabrics Inc</option>
+                                            <option>HAMPTON PAPER</option>
+                                            <option>DOUBLETEX</option>
+                                    </select>
+                                  </div>
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Item</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                        <option>FW326FL0240650</option>
+                                            <option>FW335AA0100610</option>
+                                            <option>FW335AA0100612</option>
+                                            <option>FW335AA0100630</option>
+                                            <option>FW335AA0100645</option>
+                                    </select>
+                                  </div>                               
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail" class="btn armrk-btn btn-red"><span class="oi oi-caret-right pl-1"></span></label>
+                                  </div>
+
+                                </div>
+                                <div id="grid" class="clearfix"></div>
+                            </div>
+                            <!--end of tab Receiving-->
+
+                            <!--tab On Hold-->
+                             <div class="tab-container">
+                               <div class="custForm border-bottom clearfix">
+                                 
+                                 <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Vendor</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                       <option>WESTEX INC</option>
+                                            <option>Alexander Fabrics Inc</option>
+                                            <option>HAMPTON PAPER</option>
+                                            <option>DOUBLETEX</option>
+                                    </select>
+                                  </div>
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Item</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                        <option>FW326FL0240650</option>
+                                            <option>FW335AA0100610</option>
+                                            <option>FW335AA0100612</option>
+                                            <option>FW335AA0100630</option>
+                                            <option>FW335AA0100645</option>
+                                    </select>
+                                  </div>                               
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail" class="btn armrk-btn btn-red"><span class="oi oi-caret-right pl-1"></span></label>
+                                  </div>
+
+                                </div>
+                                <div id="grid2" class="clearfix"></div>
+                            </div>
+                            <!--end of tab On Hold-->
+          
+                            <!--tab Lookup-->
+                             <div class="tab-container">
+                               <div class="custForm border-bottom clearfix">
+                                 
+                                 <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Vendor</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                       <option>WESTEX INC</option>
+                                            <option>Alexander Fabrics Inc</option>
+                                            <option>HAMPTON PAPER</option>
+                                            <option>DOUBLETEX</option>
+                                    </select>
+                                  </div>
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Item</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                        <option>FW326FL0240650</option>
+                                            <option>FW335AA0100610</option>
+                                            <option>FW335AA0100612</option>
+                                            <option>FW335AA0100630</option>
+                                            <option>FW335AA0100645</option>
+                                    </select>
+                                  </div>
+
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>CUTT Week</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                        <option>Week End - 10/20</option>
+                                            <option>Week End - 10/27</option>
+                                            <option>Week End - 11/3</option>
+                                            <option>Week End - 11/17</option>
+                                            <option>Week End - 11/24</option>
+                                    </select>
+                                  </div>
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Quantity</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <input id="simple-input" type="text" class="form-control "  value="" />
+                                  </div>
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail2" class="mt-1" ><b>Filter By</b></label>
+                                  </div>
+                                  <div class="col col-1 custFields  float-left">
+                                    <select id="size" class="" style="width: 100%;" >
+                                        <option>WOS Exception</option>
+                                            <option>WOS Item</option>
+                                            <option>WOS Item Description</option>
+                                    </select>
+                                  </div>
+                                  <div class="custFields  pr-2 float-left">
+                                    <label for="staticEmail" class="btn armrk-btn btn-red"><span class="oi oi-caret-right pl-1"></span></label>
+                                  </div>
+
+
+                               
+                                </div>
+                                <div class="row custForm clearfix">
+                                  <div class="col"> 
+                                    <div class="form-group row custFormrow pt-2">
+                                        <label for="staticEmail" class="mr-2">Item Number: FW326FL0240650</label> |
+                    
+                                        <label for="staticEmail" class="mr-4 ml-4">On Hand: 20157</label> |
+                                  
+                                        <label for="staticEmail" class="mr-4 ml-4">Any Weekly Demand: 1125</label> |
+                                    
+                                        <label for="staticEmail" class="mr-4 ml-4">Item Description: 100P 5.5oz Popline LTBL (Shirt) 4110-M104</label>
+                                    </div>
+                                  </div>
+                                  <div class="pull-right mr-4">  
+                                    <div class="form-group row custFormrow text-right">
+                                         <span title="Download PDF" class="btn-download-red"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+                                         <span title="Download Excel" class="btn-download-green"><i class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div id="grid3"></div>
+                                <div class="clearfix"></div>
+                                
+                                <div class="row custForm">
+                                  <div class="col"> 
+                                    <div class="form-group row custFormrow pt-2">
+                                        <label for="staticEmail" class="mr-2">Item Number: FW326FL0240650</label> |
+                    
+                                        <label for="staticEmail" class="mr-4 ml-4">On Hand: 15800</label> |
+                                  
+                                        <label for="staticEmail" class="mr-4 ml-4">Any Weekly Demand: 3675</label> |
+                                    
+                                        <label for="staticEmail" class="mr-4 ml-4">Item Description: AUS &amp; WG HGH VIS YELO 3078-3612 POPLIN</label>
+                                    </div>
+                                  </div>
+                                  <div class="pull-right mr-4">  
+                                    <div class="form-group row custFormrow text-right">
+                                         <span title="Download PDF" class="btn-download-red"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+                                         <span title="Download Excel" class="btn-download-green"><i class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div id="grid4"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!--end of tab Lookup-->
+                        </div>
+                    <div class="clearfix"></div>
+                    
+               
+            </div>
+
+          </div>
+
+         
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--<script src="kendo/kendo-js/jquery.min.js"></script>-->
+    <!--<script src="js/bootstrap.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="kendo/kendo-js/kendo.all.min.js"></script>
+    <script src="js/multiselect.min.js"></script>
+    <script src="js/aramark-cust.js"></script>
+     <script>
+                $(document).ready(function() {
+                    $("#tabstrip").kendoTabStrip({
+                        animation:  {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+               
+
+                 // hack for iPhone 7.0.3 multiselects bug
+                      if(navigator.userAgent.match(/iPhone/i)) {
+                          $('select[multiple]').each(function(){
+                              var select = $(this).on({
+                                  "focusout": function(){
+                                      var values = select.val() || [];
+                                      setTimeout(function(){
+                                          select.val(values.length ? values : ['']).change();
+                                      }, 1000);
+                                  }
+                              });
+                              var firstOption = '<option value="" disabled="disabled"';
+                              firstOption += (select.val() || []).length > 0 ? '' : ' selected="selected"';
+                              firstOption += '>Select ' + (select.attr('title') || 'Options') + '';
+                              firstOption += '</option>';
+                              select.prepend(firstOption);
+                          });
+                      }
+
+                      $('#multiselectmain').multiselect();
+                      $('#multiselectsub').multiselect();
+                   });
+            </script>
+
+           <!--modal config-->
+ <div class="modal fade modal-fullscreen armark-modal-admin-config" id="configAdminmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+       
+      <div class="modal-content">
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close"><img src="img/icons/icon_close.png"></button>
+        <div class="modal-header">
+          <h4 class="modal-title ml-auto mr-auto" id="myModalLabel">Configure Tabs</h4>
+          
+        </div>
+        <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <h4 class="pb-3">General Tabs</h4>
+                <div class="row">
+                    <div class="col-6">
+                       <h5>&nbsp;</h5>
+                        <select name="from[]" id="multiselectmain" class="form-control" size="8" multiple="multiple" style="display: none;">
+                        </select>
+
+                         <select name="to[]" id="multiselectmain_to" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Secure 360</option>
+                            <option value="2">Master</option>
+                            <option value="3">Raw Material</option>
+                            <option value="4">Manufacturing</option>
+                            <option value="5">Staging</option>
+                            <option value="5">Order Fulfilment</option>
+                            <option value="5">Purchase Orders</option>
+                            <option value="5">Cut Specials</option>
+                        </select>
+
+                        <div>
+                           <div class="custFields  mt-2 float-left">
+                              <label for="simple-input" class="mt-1 mr-2" ><b>New</b></label>
+                            </div>
+                            <div class="col col-8 custFields float-left mt-2">
+                              <input id="simple-input" type="text" class="k-textbox" style="width: 100%;" />
+                            </div>
+                              <span class="btn-green mt-2">+</span>    
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-6">
+                      <ul class="controller-list">
+                          <li><span id="multiselectmain_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                          <li><span class="" >Selected Tab <b>Raw Material</b></span></li>
+                          <li><span class="chip" >Make Default</span></li>
+                          <li><span id="multiselectmain_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                          <li><span class="btn-red" >X</span>           </li>
+                      </ul>           
+                    </div>
+                </div>
+              </div>
+              <div class="col-7">
+                <h4 class="pb-3">Selected Sub -  Tabs</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                      <label><b>Available</b></label>
+                        <select name="from[]" id="multiselectsub" class="form-control multipleContainer" size="8" multiple="multiple">
+                            <option value="1">Inventory Control</option>
+                            <option value="2">Fabric Receiving</option>
+                            <option value="3">Fabric Control</option>
+                            <option value="4">Receiving</option>
+                            <option value="5">Tab place holder</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_rightSelected" class="btn-arrow"><i class="oi oi-caret-right"></i></span></li>
+                        <li><span id="multiselectsub_leftSelected" class="btn-arrow"><i class="oi oi-caret-left"></i></span></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                       <label><b>Selected</b></label>
+                        <select name="to[]" id="multiselectsub_to" class="form-control multipleContainer" size="8" multiple="multiple"></select>
+                    </div>
+                    <div class="col-sm-2">
+                      <ul class="controller-list">
+                        <li><span id="multiselectsub_move_up" class="btn-arrow"><i class="oi oi-caret-top"></i></span></li>
+                        <li><span id="multiselectsub_move_down" class="btn-arrow"><i class="oi oi-caret-bottom"></i></span></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger armrk-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end of modal config-->
+           
+
+<script>
+  // <!-- data grid 1 -->
+	var data = [
+	{
+		itemNum: 'FW326FL0240650',
+		itemDescription: '100P 5.5oz Poplin LTBL (Shirt) 4110-M104',
+		oct2017: '1,982',
+		nov2017: '922',
+		dec2017: '1,322',
+		jan2018: '2,567',
+		feb2018: '1,417',
+		mar2018: '217',
+		apr2018: '-1,083',
+		may2018: '-2,088',
+		june2018: '-3,188',
+		july2018: '-4,438',
+    aug2018: '-4,438',
+		sep2018: '-4,438',
+		oct2018: '-5,598',
+		nov2018: '-6,448',
+		dec2018: '-7,448',
+		jan2019: '-8,548',
+	},
+	{
+		itemNum: 'FW335AA0100610',
+		itemDescription: 'AUS & WG HGH VIS YELO 3078-3612 POPLIN',
+		oct2017: '15,540',
+		nov2017: '11,862',
+		dec2017: '13,250',
+		jan2018: '17,570',
+		feb2018: '13,579',
+		mar2018: '9,415',
+		apr2018: '4,904',
+		may2018: '1,417',
+		june2018: '-2,400',
+		july2018: '-6,738',
+    aug2018: '-6,738',
+		sep2018: '-6,738',
+		oct2018: '-10,763',
+		nov2018: '-13,712',
+		dec2018: '-17,182',
+		jan2019: '-20,999',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid").kendoGrid({
+			dataSource: {
+				data: data,
+				schema: {
+					model: {
+						fields: {
+              itemNum:{ type: "string" },
+              itemDescription:{ type: "string" },
+              oct2017:{ type: "string" },
+              nov2017:{ type: "string" },
+              dec2017:{ type: "string" },
+              jan2018:{ type: "string" },
+              feb2018:{ type: "string" },
+              mar2018:{ type: "string" },
+              apr2018:{ type: "string" },
+              may2018:{ type: "string" },
+              june2018:{ type: "string" },
+              july2018:{ type: "string" },
+              aug2018:{ type: "string" },
+              sep2018:{ type: "string" },
+              oct2018:{ type: "string" },
+              nov2018:{ type: "string" },
+              dec2018:{ type: "string" },
+              jan2019:{ type: "string" },
+						}
+					}
+				},
+				pageSize: 7
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+					field: "itemNum",
+					title: "<div class='text-left'>Item Number</div>",
+					width: "120px",
+           template: "<div class='text-left'><b>${itemNum}</b></div>",
+				},
+				{
+					field: "itemDescription",
+					title: "<div class='text-left'>Item Description</div>",
+          width: "300px",
+          template: "<div class='text-left'><b>${itemDescription}</b></div>",
+				},
+				{
+					field: "oct2017",
+					title: "Oct 17",
+          width: "80px",
+					template: "${oct2017}",
+				},
+				{
+					field: "nov2017",
+					title: "Nov 17",
+          width: "80px",
+					template: "${nov2017}",
+				},
+        {
+					field: "dec2017",
+					title: "Dec 17",
+          width: "80px",
+					template: "${dec2017}",
+				},
+        {
+					field: "jan2018",
+					title: "Jan 18",
+          width: "80px",
+					template: "${jan2018}",
+				},
+        {
+					field: "feb2018",
+					title: "Feb 18",
+          width: "80px",
+					template: "${feb2018}",
+				},
+        {
+					field: "mar2018",
+					title: "Mar 18",
+          width: "80px",
+					template: "${mar2018}",
+				},
+        {
+					field: "apr2018",
+					title: "Apr 18",
+          width: "80px",
+					template: "${apr2018}",
+				},
+        {
+					field: "may2018",
+					title: "May 18",
+          width: "80px",
+					template: "${may2018}",
+				},
+        {
+					field: "june2018",
+					title: "Jun 18",
+          width: "80px",
+					template: "${june2018}",
+				},
+        {
+					field: "july2018",
+					title: "Jul 18",
+          width: "80px",
+					template: "${july2018}",
+				},
+        {
+					field: "aug2018",
+					title: "Aug 18",
+          width: "80px",
+					template: "${aug2018}",
+				},
+        {
+					field: "sep2018",
+					title: "Sep 18",
+          width: "80px",
+					template: "${sep2018}",
+				},
+        {
+					field: "oct2018",
+					title: "Oct 18",
+          width: "80px",
+					template: "${oct2018}",
+				},
+        {
+					field: "nov2018",
+					title: "Nov 18",
+          width: "80px",
+					template: "${nov2018}",
+				},
+        {
+					field: "dec2018",
+					title: "Dec 18",
+          width: "80px",
+					template: "${dec2018}",
+				},
+        {
+					field: "jan2019",
+					title: "Jan 19",
+          width: "80px",
+					template: "${jan2019}",
+				},
+
+			]
+		});
+	});
+
+</script> <!-- data grid 1 -->
+
+
+
+
+
+<script>
+  // <!-- data grid 2 -->
+	var data2 = [
+	{
+		itemNum: 'FW326FL0240650',
+		itemDescription: '100P 5.5oz Poplin LTBL (Shirt) 4110-M104',
+		oct2017: '1,982',
+		nov2017: '922',
+		dec2017: '1,322',
+		jan2018: '2,567',
+		feb2018: '1,417',
+		mar2018: '217',
+		apr2018: '-1,083',
+		may2018: '-2,088',
+		june2018: '-3,188',
+		july2018: '-4,438',
+    aug2018: '-4,438',
+		sep2018: '-4,438',
+		oct2018: '-5,598',
+		nov2018: '-6,448',
+		dec2018: '-7,448',
+		jan2019: '-8,548',
+	},
+	{
+		itemNum: 'FW335AA0100610',
+		itemDescription: 'AUS & WG HGH VIS YELO 3078-3612 POPLIN',
+		oct2017: '15,540',
+		nov2017: '11,862',
+		dec2017: '13,250',
+		jan2018: '17,570',
+		feb2018: '13,579',
+		mar2018: '9,415',
+		apr2018: '4,904',
+		may2018: '1,417',
+		june2018: '-2,400',
+		july2018: '-6,738',
+    aug2018: '-6,738',
+		sep2018: '-6,738',
+		oct2018: '-10,763',
+		nov2018: '-13,712',
+		dec2018: '-17,182',
+		jan2019: '-20,999',
+	},
+	]
+	$(document).ready(function() {
+		var element = $("#grid2").kendoGrid({
+			dataSource: {
+				data: data2,
+				schema: {
+					model: {
+						fields: {
+							itemNum:{ type: "string" },
+              itemDescription:{ type: "string" },
+              oct2017:{ type: "string" },
+              nov2017:{ type: "string" },
+              dec2017:{ type: "string" },
+              jan2018:{ type: "string" },
+              feb2018:{ type: "string" },
+              mar2018:{ type: "string" },
+              apr2018:{ type: "string" },
+              may2018:{ type: "string" },
+              june2018:{ type: "string" },
+              july2018:{ type: "string" },
+              aug2018:{ type: "string" },
+              sep2018:{ type: "string" },
+              oct2018:{ type: "string" },
+              nov2018:{ type: "string" },
+              dec2018:{ type: "string" },
+              jan2019:{ type: "string" },
+						}
+					}
+				},
+				pageSize: 7
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+					field: "itemNum",
+					title: "<div class='text-left'>Item Number</div>",
+					width: "120px",
+           template: "<div class='text-left'><a href='' class='link link-blue'><b>${itemNum}</b></a></div>",
+				},
+				{
+					field: "itemDescription",
+					title: "<div class='text-left'>Item Description</div>",
+          width: "300px",
+          template: "<div class='text-left'><b>${itemDescription}</b></div>",
+				},
+				{
+					field: "oct2017",
+					title: "10/20",
+          width: "80px",
+					template: "${oct2017}",
+				},
+				{
+					field: "nov2017",
+					title: "10/27",
+          width: "80px",
+					template: "${nov2017}",
+				},
+        {
+					field: "dec2017",
+					title: "11/3",
+          width: "80px",
+					template: "${dec2017}",
+				},
+        {
+					field: "jan2018",
+					title: "11/10",
+          width: "80px",
+					template: "${jan2018}",
+				},
+        {
+					field: "feb2018",
+					title: "11/17",
+          width: "80px",
+					template: "${feb2018}",
+				},
+        {
+					field: "mar2018",
+					title: "11/24",
+          width: "80px",
+					template: "${mar2018}",
+				},
+        {
+					field: "apr2018",
+					title: "12/1",
+          width: "80px",
+					template: "${apr2018}",
+				},
+        {
+					field: "may2018",
+					title: "12/8",
+          width: "80px",
+					template: "${may2018}",
+				},
+        {
+					field: "june2018",
+					title: "12/15",
+          width: "80px",
+					template: "${june2018}",
+				},
+        {
+					field: "july2018",
+					title: "12/22",
+          width: "80px",
+					template: "${july2018}",
+				},
+        {
+					field: "aug2018",
+					title: "12/29",
+          width: "80px",
+					template: "${aug2018}",
+				},
+        {
+					field: "sep2018",
+					title: "1/5",
+          width: "80px",
+					template: "${sep2018}",
+				},
+        {
+					field: "oct2018",
+					title: "1/12",
+          width: "80px",
+					template: "${oct2018}",
+				},
+        {
+					field: "nov2018",
+					title: "1/19",
+          width: "80px",
+					template: "${nov2018}",
+				},
+        {
+					field: "dec2018",
+					title: "1/26",
+          width: "80px",
+					template: "${dec2018}",
+				},
+        {
+					field: "jan2019",
+					title: "2/2",
+          width: "80px",
+					template: "${jan2019}",
+				},
+
+			]
+		});
+	});
+
+</script> <!-- data grid 2 -->
+
+
+<script>
+  // <!-- data grid 3 -->
+	var data3 = [
+	{
+		itemNum: 'Sched Recepts',
+		oct2017: '950',
+    oct2017status:'',
+		nov2017: '750',
+    nov2017status:'',
+		dec2017: '1500',
+    dec2017status:'',
+		jan2018: '3000',
+    jan2018status:'',
+		feb2018: '0',
+    feb2018status:'',
+		mar2018: '0',
+    mar2018status:'',
+		apr2018: '0',
+    apr2018status:'',
+		may2018: '0',
+    may2018status:'',
+		june2018: '0',
+    june2018status:'',
+		july2018: '0',
+    july2018status:'',
+    aug2018: '0',
+    aug2018status:'',
+		sep2018: '0',
+    sep2018status:'',
+		oct2018: '0',
+    oct2018status:'',
+		nov2018: '0',
+    nov2018status:'',
+		dec2018: '0',
+    dec2018status:'',
+		jan2019: '0',
+    jan2019status:'',
+	},
+  {
+		itemNum: 'Unalloc Cut Req',
+		oct2017: '0',
+    oct2017status:'',
+		nov2017: '560',
+    nov2017status:'',
+		dec2017: '0',
+    dec2017status:'',
+		jan2018: '630',
+    jan2018status:'',
+		feb2018: '0',
+    feb2018status:'',
+		mar2018: '0',
+    mar2018status:'',
+		apr2018: '0',
+    apr2018status:'',
+		may2018: '0',
+    may2018status:'',
+		june2018: '0',
+    june2018status:'',
+		july2018: '0',
+    july2018status:'',
+    aug2018: '0',
+    aug2018status:'',
+		sep2018: '0',
+    sep2018status:'',
+		oct2018: '0',
+    oct2018status:'',
+		nov2018: '0',
+    nov2018status:'',
+		dec2018: '0',
+    dec2018status:'',
+		jan2019: '0',
+    jan2019status:'',
+	},
+	{
+		itemNum: 'Fcst Req',
+		oct2017: '1025',
+    oct2017status:'',
+		nov2017: '1250',
+    nov2017status:'',
+		dec2017: '1100',
+    dec2017status:'',
+		jan2018: '1125',
+    jan2018status:'',
+		feb2018: '1150',
+    feb2018status:'',
+		mar2018: '1200',
+    mar2018status:'',
+		apr2018: '1300',
+    apr2018status:'',
+		may2018: '1005',
+    may2018status:'',
+		june2018: '1100',
+    june2018status:'',
+		july2018: '1250',
+    july2018status:'',
+    aug2018: '0',
+    aug2018status:'',
+		sep2018: '0',
+    sep2018status:'',
+		oct2018: '1160',
+    oct2018status:'',
+		nov2018: '850',
+    nov2018status:'',
+		dec2018: '1000',
+    dec2018status:'',
+		jan2019: '1100',
+    jan2019status:'',
+	},
+  {
+		itemNum: 'Fcst Req End Invt',
+		oct2017: '1982',
+    oct2017status:'',
+		nov2017: '922',
+    nov2017status:'',
+		dec2017: '1322',
+    dec2017status:'',
+		jan2018: '2567',
+    jan2018status:'',
+		feb2018: '1417',
+    feb2018status:'',
+		mar2018: '217',
+    mar2018status:'',
+		apr2018: '-1083',
+    apr2018status:'',
+		may2018: '-2088',
+    may2018status:'',
+		june2018: '-3188',
+    june2018status:'',
+		july2018: '-4438',
+    july2018status:'',
+    aug2018: '-4438',
+    aug2018status:'',
+		sep2018: '-4438',
+    sep2018status:'',
+		oct2018: '-5598',
+    oct2018status:'',
+		nov2018: '-6448',
+    nov2018status:'',
+		dec2018: '-7448',
+    dec2018status:'',
+		jan2019: '-8548',
+    jan2019status:'',
+	},
+  {
+    itemNum: 'Fcst Req WOS',
+    oct2017: '1.8',
+    oct2017status:'critical',
+    nov2017: '0.8',
+    nov2017status:'warning',
+    dec2017: '1.2',
+    dec2017status:'critical',
+    jan2018: '2.3',
+    jan2018status:'better',
+    feb2018: '1.3',
+    feb2018status:'critical',
+    mar2018: '0.2',
+    mar2018status:'warning',
+    apr2018: '-1.0',
+    apr2018status:'warning',
+    may2018: '-1.9',
+    may2018status:'warning',
+    june2018: '-2.8',
+    june2018status:'warning',
+    july2018: '-3.9',
+    july2018status:'warning',
+    aug2018: '-3.9',
+    aug2018status:'warning',
+    sep2018: '-3.9',
+    sep2018status:'warning',
+    oct2018: '-5.0',
+    oct2018status:'warning',
+    nov2018: '-5.7',
+    nov2018status:'warning',
+    dec2018: '-6.6',
+    dec2018status:'warning',
+    jan2019: '-7.6',
+    jan2019status:'warning',
+  },
+  { 
+    itemNum: 'Hist Avg Req',
+    oct2017: '1125',
+    oct2017status:'',
+    nov2017: '1125',
+    nov2017status:'',
+    dec2017: '1125',
+    dec2017status:'',
+    jan2018: '1125',
+    jan2018status:'',
+    feb2018: '1125',
+    feb2018status:'',
+    mar2018: '1125',
+    mar2018status:'',
+    apr2018: '1125',
+    apr2018status:'',
+    may2018: '1125',
+    may2018status:'',
+    june2018: '1125',
+    june2018status:'',
+    july2018: '1125',
+    july2018status:'',
+    aug2018: '1125',
+    aug2018status:'',
+    sep2018: '1125',
+    sep2018status:'',
+    oct2018: '1125',
+    oct2018status:'',
+    nov2018: '1125',
+    nov2018status:'',
+    dec2018: '1125',
+    dec2018status:'',
+    jan2019: '1125',
+    jan2019status:'',
+  },
+  { 
+    itemNum: 'Hist Req End Invt',
+    oct2017: '1882',
+    oct2017status:'',
+    nov2017: '947',
+    nov2017status:'',
+    dec2017: '1322',
+    dec2017status:'',
+    jan2018: '2567',
+    jan2018status:'',
+    feb2018: '1442',
+    feb2018status:'',
+    mar2018: '317',
+    mar2018status:'',
+    apr2018: '-808',
+    apr2018status:'',
+    may2018: '-1933',
+    may2018status:'',
+    june2018: '-3058',
+    june2018status:'',
+    july2018: '-4183',
+    july2018status:'',
+    aug2018: '-5308',
+    aug2018status:'',
+    sep2018: '-6433',
+    sep2018status:'',
+    oct2018: '-7558',
+    oct2018status:'',
+    nov2018: '-8683',
+    nov2018status:'',
+    dec2018: '-9808',
+    dec2018status:'',
+    jan2019: '-10933 ',
+    jan2019status:'',
+  },
+  { 
+    itemNum: 'Hist Req WOS',
+    oct2017: '1.7',
+    oct2017status:'critical',
+    nov2017: '0.8',
+    nov2017status:'warning',
+    dec2017: '1.2',
+    dec2017status:'critical',
+    jan2018: '2.3',
+    jan2018status:'better',
+    feb2018: '1.3',
+    feb2018status:'critical',
+    mar2018: '0.3',
+    mar2018status:'warning',
+    apr2018: '-0.7',
+    apr2018status:'warning',
+    may2018: '-1.7',
+    may2018status:'warning',
+    june2018: '-2.7',
+    june2018status:'warning',
+    july2018: '-3.7',
+    july2018status:'warning',
+    aug2018: '-4.7',
+    aug2018status:'warning',
+    sep2018: '-5.7',
+    sep2018status:'warning',
+    oct2018: '-6.7',
+    oct2018status:'warning',
+    nov2018: '-7.7',
+    nov2018status:'warning',
+    dec2018: '-8.7',
+    dec2018status:'warning',
+    jan2019: '-9.7 ',
+    jan2019status:'warning',
+  },
+	]
+	$(document).ready(function() {
+		var element = $("#grid3").kendoGrid({
+			dataSource: {
+				data: data3,
+				schema: {
+					model: {
+						fields: {
+							itemNum:{ type: "string" },
+              oct2017:{ type: "string" },
+              oct2017status:{ type: "string" },
+              nov2017:{ type: "string" },
+              nov2017status:{ type: "string" },
+              dec2017:{ type: "string" },
+              dec2017status:{ type: "string" },
+              jan2018:{ type: "string" },
+              jan2018status:{ type: "string" },
+              feb2018:{ type: "string" },
+              feb2018status:{ type: "string" },
+              mar2018:{ type: "string" },
+              mar2018status:{ type: "string" },
+              apr2018:{ type: "string" },
+              apr2018status:{ type: "string" },
+              may2018:{ type: "string" },
+              may2018status:{ type: "string" },
+              june2018:{ type: "string" },
+              june2018status:{ type: "string" },
+              july2018:{ type: "string" },
+              july2018status:{ type: "string" },
+              aug2018:{ type: "string" },
+              aug2018status:{ type: "string" },
+              sep2018:{ type: "string" },
+              sep2018status:{ type: "string" },
+              oct2018:{ type: "string" },
+              oct2018status:{ type: "string" },
+              nov2018:{ type: "string" },
+              nov2018status:{ type: "string" },
+              dec2018:{ type: "string" },
+              dec2018status:{ type: "string" },
+              jan2019:{ type: "string" },
+              jan2019status:{ type: "string" },
+						}
+					}
+				},
+				// pageSize: 7
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+					field: "itemNum",
+					title: "<div class='text-left'>Week End Dt:</div>",
+					width: "160px",
+           template: "<div class='text-left'><b>${itemNum}</b></div>",
+				},
+				{
+					field: "oct2017",
+					title: "10/20",
+          width: "80px",
+					template: "<div class='${oct2017status}'>${oct2017}</div>",
+          
+				},
+				{
+					field: "nov2017",
+					title: "10/27",
+          width: "80px",
+					template: "<div class='${nov2017status}'>${nov2017}</div>",
+          
+				},
+        {
+					field: "dec2017",
+					title: "11/3",
+          width: "80px",
+					template: "<div class='${dec2017status}'>${dec2017}</div>",
+          
+				},
+        {
+					field: "jan2018",
+					title: "11/10",
+          width: "80px",
+					template: "<div class='${jan2018status}'>${jan2018}</div>",
+          
+				},
+        {
+					field: "feb2018",
+					title: "11/17",
+          width: "80px",
+					template: "<div class='${feb2018status}'>${feb2018}</div>",
+          
+				},
+        {
+					field: "mar2018",
+					title: "11/24",
+          width: "80px",
+					template: "<div class='${mar2018status}'>${mar2018}</div>",
+          
+				},
+        {
+					field: "apr2018",
+					title: "12/1",
+          width: "80px",
+					template: "<div class='${apr2018status}'>${apr2018}</div>",
+          
+				},
+        {
+					field: "may2018",
+					title: "12/8",
+          width: "80px",
+					template: "<div class='${may2018status}'>${may2018}</div>",
+          
+				},
+        {
+					field: "june2018",
+					title: "12/15",
+          width: "80px",
+					template: "<div class='${june2018status}'>${june2018}</div>",
+          
+				},
+        {
+					field: "july2018",
+					title: "12/22",
+          width: "80px",
+					template: "<div class='${july2018status}'>${july2018}</div>",
+          
+				},
+        {
+					field: "aug2018",
+					title: "12/29",
+          width: "80px",
+					template: "<div class='${aug2018status}'>${aug2018}</div>",
+          
+				},
+        {
+					field: "sep2018",
+					title: "1/5",
+          width: "80px",
+					template: "<div class='${sep2018status}'>${sep2018}</div>",
+          
+				},
+        {
+					field: "oct2018",
+					title: "1/12",
+          width: "80px",
+					template: "<div class='${oct2018status}'>${oct2018}</div>",
+          
+				},
+        {
+					field: "nov2018",
+					title: "1/19",
+          width: "80px",
+					template: "<div class='${nov2018status}'>${nov2018}</div>",
+          
+				},
+        {
+					field: "dec2018",
+					title: "1/26",
+          width: "80px",
+					template: "<div class='${dec2018status}'>${dec2018}</div>",
+          
+				},
+        {
+					field: "jan2019",
+					title: "2/2",
+          width: "80px",
+					template: "<div class='${jan2019status}'>${jan2019}</div>",
+
+          
+				},
+
+			]
+		});
+	});
+
+
+</script> <!-- data grid 3 -->
+
+<script>
+  // <!-- data grid 3 -->
+		var data4 = [
+	{
+		itemNum: 'Sched Recepts',
+		oct2017: '950',
+    oct2017status:'',
+		nov2017: '750',
+    nov2017status:'',
+		dec2017: '1500',
+    dec2017status:'',
+		jan2018: '3000',
+    jan2018status:'',
+		feb2018: '0',
+    feb2018status:'',
+		mar2018: '0',
+    mar2018status:'',
+		apr2018: '0',
+    apr2018status:'',
+		may2018: '0',
+    may2018status:'',
+		june2018: '0',
+    june2018status:'',
+		july2018: '0',
+    july2018status:'',
+    aug2018: '0',
+    aug2018status:'',
+		sep2018: '0',
+    sep2018status:'',
+		oct2018: '0',
+    oct2018status:'',
+		nov2018: '0',
+    nov2018status:'',
+		dec2018: '0',
+    dec2018status:'',
+		jan2019: '0',
+    jan2019status:'',
+	},
+  {
+		itemNum: 'Unalloc Cut Req',
+		oct2017: '0',
+    oct2017status:'',
+		nov2017: '560',
+    nov2017status:'',
+		dec2017: '0',
+    dec2017status:'',
+		jan2018: '630',
+    jan2018status:'',
+		feb2018: '0',
+    feb2018status:'',
+		mar2018: '0',
+    mar2018status:'',
+		apr2018: '0',
+    apr2018status:'',
+		may2018: '0',
+    may2018status:'',
+		june2018: '0',
+    june2018status:'',
+		july2018: '0',
+    july2018status:'',
+    aug2018: '0',
+    aug2018status:'',
+		sep2018: '0',
+    sep2018status:'',
+		oct2018: '0',
+    oct2018status:'',
+		nov2018: '0',
+    nov2018status:'',
+		dec2018: '0',
+    dec2018status:'',
+		jan2019: '0',
+    jan2019status:'',
+	},
+	{
+		itemNum: 'Fcst Req',
+		oct2017: '1025',
+    oct2017status:'',
+		nov2017: '1250',
+    nov2017status:'',
+		dec2017: '1100',
+    dec2017status:'',
+		jan2018: '1125',
+    jan2018status:'',
+		feb2018: '1150',
+    feb2018status:'',
+		mar2018: '1200',
+    mar2018status:'',
+		apr2018: '1300',
+    apr2018status:'',
+		may2018: '1005',
+    may2018status:'',
+		june2018: '1100',
+    june2018status:'',
+		july2018: '1250',
+    july2018status:'',
+    aug2018: '0',
+    aug2018status:'',
+		sep2018: '0',
+    sep2018status:'',
+		oct2018: '1160',
+    oct2018status:'',
+		nov2018: '850',
+    nov2018status:'',
+		dec2018: '1000',
+    dec2018status:'',
+		jan2019: '1100',
+    jan2019status:'',
+	},
+  {
+		itemNum: 'Fcst Req End Invt',
+		oct2017: '1982',
+    oct2017status:'',
+		nov2017: '922',
+    nov2017status:'',
+		dec2017: '1322',
+    dec2017status:'',
+		jan2018: '2567',
+    jan2018status:'',
+		feb2018: '1417',
+    feb2018status:'',
+		mar2018: '217',
+    mar2018status:'',
+		apr2018: '-1083',
+    apr2018status:'',
+		may2018: '-2088',
+    may2018status:'',
+		june2018: '-3188',
+    june2018status:'',
+		july2018: '-4438',
+    july2018status:'',
+    aug2018: '-4438',
+    aug2018status:'',
+		sep2018: '-4438',
+    sep2018status:'',
+		oct2018: '-5598',
+    oct2018status:'',
+		nov2018: '-6448',
+    nov2018status:'',
+		dec2018: '-7448',
+    dec2018status:'',
+		jan2019: '-8548',
+    jan2019status:'',
+	},
+  {
+    itemNum: 'Fcst Req WOS',
+    oct2017: '1.8',
+    oct2017status:'better',
+    nov2017: '0.8',
+    nov2017status:'better',
+    dec2017: '1.2',
+    dec2017status:'better',
+    jan2018: '2.3',
+    jan2018status:'better',
+    feb2018: '1.3',
+    feb2018status:'better',
+    mar2018: '0.2',
+    mar2018status:'better',
+    apr2018: '-1.0',
+    apr2018status:'critical',
+    may2018: '-1.9',
+    may2018status:'warning',
+    june2018: '-2.8',
+    june2018status:'warning',
+    july2018: '-3.9',
+    july2018status:'warning',
+    aug2018: '-3.9',
+    aug2018status:'warning',
+    sep2018: '-3.9',
+    sep2018status:'warning',
+    oct2018: '-5.0',
+    oct2018status:'warning',
+    nov2018: '-5.7',
+    nov2018status:'warning',
+    dec2018: '-6.6',
+    dec2018status:'warning',
+    jan2019: '-7.6',
+    jan2019status:'warning',
+  },
+  { 
+    itemNum: 'Hist Avg Req',
+    oct2017: '1125',
+    oct2017status:'',
+    nov2017: '1125',
+    nov2017status:'',
+    dec2017: '1125',
+    dec2017status:'',
+    jan2018: '1125',
+    jan2018status:'',
+    feb2018: '1125',
+    feb2018status:'',
+    mar2018: '1125',
+    mar2018status:'',
+    apr2018: '1125',
+    apr2018status:'',
+    may2018: '1125',
+    may2018status:'',
+    june2018: '1125',
+    june2018status:'',
+    july2018: '1125',
+    july2018status:'',
+    aug2018: '1125',
+    aug2018status:'',
+    sep2018: '1125',
+    sep2018status:'',
+    oct2018: '1125',
+    oct2018status:'',
+    nov2018: '1125',
+    nov2018status:'',
+    dec2018: '1125',
+    dec2018status:'',
+    jan2019: '1125',
+    jan2019status:'',
+  },
+  { 
+    itemNum: 'Hist Req End Invt',
+    oct2017: '1882',
+    oct2017status:'',
+    nov2017: '947',
+    nov2017status:'',
+    dec2017: '1322',
+    dec2017status:'',
+    jan2018: '2567',
+    jan2018status:'',
+    feb2018: '1442',
+    feb2018status:'',
+    mar2018: '317',
+    mar2018status:'',
+    apr2018: '-808',
+    apr2018status:'',
+    may2018: '-1933',
+    may2018status:'',
+    june2018: '-3058',
+    june2018status:'',
+    july2018: '-4183',
+    july2018status:'',
+    aug2018: '-5308',
+    aug2018status:'',
+    sep2018: '-6433',
+    sep2018status:'',
+    oct2018: '-7558',
+    oct2018status:'',
+    nov2018: '-8683',
+    nov2018status:'',
+    dec2018: '-9808',
+    dec2018status:'',
+    jan2019: '-10933 ',
+    jan2019status:'',
+  },
+  { 
+    itemNum: 'Hist Req WOS',
+    oct2017: '1.7',
+    oct2017status:'better',
+    nov2017: '0.8',
+    nov2017status:'better',
+    dec2017: '1.2',
+    dec2017status:'better',
+    jan2018: '2.3',
+    jan2018status:'better',
+    feb2018: '1.3',
+    feb2018status:'better',
+    mar2018: '0.3',
+    mar2018status:'better',
+    apr2018: '-0.7',
+    apr2018status:'better',
+    may2018: '-1.7',
+    may2018status:'critical',
+    june2018: '-2.7',
+    june2018status:'warning',
+    july2018: '-3.7',
+    july2018status:'warning',
+    aug2018: '-4.7',
+    aug2018status:'warning',
+    sep2018: '-5.7',
+    sep2018status:'warning',
+    oct2018: '-6.7',
+    oct2018status:'warning',
+    nov2018: '-7.7',
+    nov2018status:'warning',
+    dec2018: '-8.7',
+    dec2018status:'warning',
+    jan2019: '-9.7 ',
+    jan2019status:'warning',
+  },
+	]
+	$(document).ready(function() {
+		var element = $("#grid4").kendoGrid({
+			dataSource: {
+				data: data4,
+				schema: {
+					model: {
+						fields: {
+							itemNum:{ type: "string" },
+              oct2017:{ type: "string" },
+              oct2017status:{ type: "string" },
+              nov2017:{ type: "string" },
+              nov2017status:{ type: "string" },
+              dec2017:{ type: "string" },
+              dec2017status:{ type: "string" },
+              jan2018:{ type: "string" },
+              jan2018status:{ type: "string" },
+              feb2018:{ type: "string" },
+              feb2018status:{ type: "string" },
+              mar2018:{ type: "string" },
+              mar2018status:{ type: "string" },
+              apr2018:{ type: "string" },
+              apr2018status:{ type: "string" },
+              may2018:{ type: "string" },
+              may2018status:{ type: "string" },
+              june2018:{ type: "string" },
+              june2018status:{ type: "string" },
+              july2018:{ type: "string" },
+              july2018status:{ type: "string" },
+              aug2018:{ type: "string" },
+              aug2018status:{ type: "string" },
+              sep2018:{ type: "string" },
+              sep2018status:{ type: "string" },
+              oct2018:{ type: "string" },
+              oct2018status:{ type: "string" },
+              nov2018:{ type: "string" },
+              nov2018status:{ type: "string" },
+              dec2018:{ type: "string" },
+              dec2018status:{ type: "string" },
+              jan2019:{ type: "string" },
+              jan2019status:{ type: "string" },
+						}
+					}
+				},
+				// pageSize: 7
+			},
+			sortable: false,
+			pageable: false,
+			// detailTemplate: kendo.template($("#template1").html()),
+			// detailInit: detailInit,
+			dataBound: function() {
+			},
+			columns: [
+				{
+					field: "itemNum",
+					title: "<div class='text-left'>Week End Dt:</div>",
+					width: "160px",
+           template: "<div class='text-left'><b>${itemNum}</b></div>",
+				},
+				{
+					field: "oct2017",
+					title: "10/20",
+          width: "80px",
+					template: "<div class='${oct2017status}'>${oct2017}</div>",
+          
+				},
+				{
+					field: "nov2017",
+					title: "10/27",
+          width: "80px",
+					template: "<div class='${nov2017status}'>${nov2017}</div>",
+          
+				},
+        {
+					field: "dec2017",
+					title: "11/3",
+          width: "80px",
+					template: "<div class='${dec2017status}'>${dec2017}</div>",
+          
+				},
+        {
+					field: "jan2018",
+					title: "11/10",
+          width: "80px",
+					template: "<div class='${jan2018status}'>${jan2018}</div>",
+          
+				},
+        {
+					field: "feb2018",
+					title: "11/17",
+          width: "80px",
+					template: "<div class='${feb2018status}'>${feb2018}</div>",
+          
+				},
+        {
+					field: "mar2018",
+					title: "11/24",
+          width: "80px",
+					template: "<div class='${mar2018status}'>${mar2018}</div>",
+          
+				},
+        {
+					field: "apr2018",
+					title: "12/1",
+          width: "80px",
+					template: "<div class='${apr2018status}'>${apr2018}</div>",
+          
+				},
+        {
+					field: "may2018",
+					title: "12/8",
+          width: "80px",
+					template: "<div class='${may2018status}'>${may2018}</div>",
+          
+				},
+        {
+					field: "june2018",
+					title: "12/15",
+          width: "80px",
+					template: "<div class='${june2018status}'>${june2018}</div>",
+          
+				},
+        {
+					field: "july2018",
+					title: "12/22",
+          width: "80px",
+					template: "<div class='${july2018status}'>${july2018}</div>",
+          
+				},
+        {
+					field: "aug2018",
+					title: "12/29",
+          width: "80px",
+					template: "<div class='${aug2018status}'>${aug2018}</div>",
+          
+				},
+        {
+					field: "sep2018",
+					title: "1/5",
+          width: "80px",
+					template: "<div class='${sep2018status}'>${sep2018}</div>",
+          
+				},
+        {
+					field: "oct2018",
+					title: "1/12",
+          width: "80px",
+					template: "<div class='${oct2018status}'>${oct2018}</div>",
+          
+				},
+        {
+					field: "nov2018",
+					title: "1/19",
+          width: "80px",
+					template: "<div class='${nov2018status}'>${nov2018}</div>",
+          
+				},
+        {
+					field: "dec2018",
+					title: "1/26",
+          width: "80px",
+					template: "<div class='${dec2018status}'>${dec2018}</div>",
+          
+				},
+        {
+					field: "jan2019",
+					title: "2/2",
+          width: "80px",
+					template: "<div class='${jan2019status}'>${jan2019}</div>",
+
+          
+				},
+
+			]
+		});
+	});
+
+
+</script> <!-- data grid 4 -->
+
+
+<script>
+  $(document).ready(function() {
+      var tooltip = $("#agglomerations").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+      var tooltip = $("#agglomerations2").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+      var tooltip = $("#agglomerations3").kendoTooltip({
+          filter: "span",
+          width: 120,
+          position: "bottom"
+      }).data("kendoTooltip");
+
+      // tooltip.show($("#canton"));
+
+      $("#agglomerations").find("a").click(false);
+      $("#agglomerations2").find("a").click(false);
+      $("#agglomerations3").find("a").click(false);
+
+  });
+
+    $(document).ready(function(){
+
+  
+    
+     $('#mainCheckbox').change(function () {
+        if ($(this).prop('checked')) {
+          $('input.parent_div[type="checkbox"]').prop('checked', true);
+        } else {
+          $('input.parent_div[type="checkbox"]').prop('checked', false);
+        }
+      });
+
+});
+
+</script>
+<!-- Pre Qual -->
+  </body>
+</html>
