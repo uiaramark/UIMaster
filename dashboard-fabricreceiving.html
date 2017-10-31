@@ -334,14 +334,28 @@
                       <div class="form-group row custFormrow">
                         <label for="inputEmail3" class="col-sm-5 col-form-label">Container ID</label>
                         <div class="col-sm-7 custFields">
-                          <input type="text" class="form-control k-textbox" id="inputEmail3" placeholder="Container ID" value="18990">
+                          <select id="size" class="form-control">
+                            <option></option>
+                            <option>MILLIKEN | 17</option>
+                            <option>DULOS | 25 </option>
+                            <option>Alexander Fabrics Inc. | 26 </option>
+                            <option>HAMPTON PAPER | 68</option>
+                            <option>DOUBLETEX | 247</option>
+                          </select>
                         </div>
                       </div>
 
                       <div class="form-group row custFormrow">
                         <label for="staticEmail" class="col-sm-5 col-form-label">PO#</label>
                         <div class="col-sm-7 custFields">
-                          <input id="simple-input" type="text" class="form-control k-textbox" value="18990" />
+                          <select id="size" class="form-control" >
+                            <option></option>
+                            <option>MILLIKEN | 17</option>
+                            <option>DULOS | 25 </option>
+                            <option>Alexander Fabrics Inc. | 26 </option>
+                            <option>HAMPTON PAPER | 68</option>
+                            <option>DOUBLETEX | 247</option>
+                          </select>
                         </div>
                       </div>
 
@@ -417,8 +431,7 @@
 
                   <div id="grid" class="clearfix"></div>
                   <div class="form-group pr-4 pull-right">
-                    <button type="submit" class="btn btn-danger armrk-btn">Save</button>
-                    <button type="submit" class="btn btn-danger armrk-btn">Post</button>
+                    <button type="submit" class="btn btn-danger armrk-btn">Receive</button>
                   </div>
                 </div>
                 <!--end of tab Receiving-->
@@ -431,7 +444,13 @@
                         <label for="staticEmail" class="col-sm-5 col-form-label">Container ID
                         </label>
                         <div class="col-sm-7 custFields">
-                          <input id="simple-input" type="text" class="form-control k-textbox" value="30131" />
+                          <select id="size" class="form-control k-textbox">
+                            <option>MILLIKEN | 17</option>
+                            <option>DULOS | 25 </option>
+                            <option>Alexander Fabrics Inc. | 26 </option>
+                            <option>HAMPTON PAPER | 68</option>
+                            <option>DOUBLETEX | 247</option>
+                          </select>
                         </div>
                       </div>
 
@@ -439,7 +458,13 @@
                         <label for="staticEmail" class="col-sm-5 col-form-label">PO #
                         </label>
                         <div class="col-sm-7 custFields">
-                          <input id="simple-input" type="text" class="form-control k-textbox" value="10/06/2017" />
+                          <select id="size" class="form-control k-textbox">
+                            <option>MILLIKEN | 17</option>
+                            <option>DULOS | 25 </option>
+                            <option>Alexander Fabrics Inc. | 26 </option>
+                            <option>HAMPTON PAPER | 68</option>
+                            <option>DOUBLETEX | 247</option>
+                          </select>
                         </div>
                       </div>
 
@@ -516,16 +541,10 @@
 
                   <div id="grid2" class="clearfix"></div>
 
-                  <form class="armrk-tbl-footer custFields form-inline clearfix">
-                    <div class="form-group">
-                      <label for="staticEmail2" class="">Total Rolls:</label>
-                      <input type="text" class="k-textbox" id="" value="0">
-                    </div>
-                    <div class="form-group  mr-auto">
-                      <label for="inputPassword2" class="">Total Yards</label>
-                      <input type="text" class="k-textbox" id="" value="0">
-                    </div>
-                  </form>
+                  <div class="form-group pr-4 pull-right">
+                    <button type="submit" class="btn btn-danger armrk-btn">Save</button>
+                    <button type="submit" class="btn btn-danger armrk-btn">Post</button>
+                  </div>
                 </div>
                 <!--end of tab Receipt-->
 
@@ -1008,7 +1027,7 @@
           },
           {
             field: "yards",
- title: "Yards",
+            title: "Yards",
             width: "100px",
             template: " <input type = 'text' style = 'width: 100%;' value = '${yards}'> ",
           },
